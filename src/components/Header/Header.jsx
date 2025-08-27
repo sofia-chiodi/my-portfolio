@@ -1,4 +1,5 @@
 import { Sparkles, X } from 'lucide-react'
+import menuItems from '@/components/Header/menuItems.js'
 
 export const Header = () => {
   return (
@@ -19,15 +20,17 @@ export const Header = () => {
 
             {/* Desktop */}
             <nav className='hidden md:flex space-x-8'>
-
-              <button 
-              className={`capitalize font-medium transition-all duration-300 hover:scale-105 relative group`}
-              >
-                Home
-                <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-200 to-pink-300 transition-all duration-300 group-hover:w-full '></span>
-              </button>
+              {menuItems.map((item) => (
+                <button 
+                key={item.label}
+                className={`capitalize font-medium transition-all duration-300 hover:scale-105 relative group`}
+                >
+                  {item.label}
+                  <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-200 to-pink-300 transition-all duration-300 group-hover:w-full '></span>
+                </button>
+              ))}
             </nav>
-
+    
             {/* Mobile Menu Button */}
             <button className={`md:hidden p-2 rounded-lg transition-all duration-300`}>
               <X size={24} strokeWidth={2.1} />
@@ -35,6 +38,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu */}
+          
           <div className='md:hidden bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl mt-2 py-6 border border-purple-100'>
             
             <button className='block w-full text-left px-6 py-3 texr-gray-500 hover:bg-gradient-to-r hover:from-violet-100 hover:to-pink-200 hover:text-violet-400 capitalize font-medium transition-all duration-150'>Home</button>
