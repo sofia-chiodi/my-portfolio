@@ -17,7 +17,8 @@ export const Header = () => {
               </h1>
             </div>
 
-            <nav className='hidden md:\flex space-x-8'>
+            {/* Desktop */}
+            <nav className='hidden md:flex space-x-8'>
 
               <button 
               className={`capitalize font-medium transition-all duration-300 hover:scale-105 relative group`}
@@ -27,9 +28,16 @@ export const Header = () => {
               </button>
             </nav>
 
-            <div className='md:hidden'>
-              
-            </div>
+            {/* Mobile Menu Button */}
+            <button className={`md:hidden p-2 rounded-lg transition-all duration-300`}>
+              <X size={24} strokeWidth={2.1} />
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className='md:hidden bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl mt-2 py-6 border border-purple-100'>
+            
+            <button className='block w-full text-left px-6 py-3 texr-gray-500 hover:bg-gradient-to-r hover:from-purple-200 hover:to-pink-300 hover:text-pink-800 capitalize font-medium transition-all duration-300'>Home</button>
           </div>
       </div>
     </header>
