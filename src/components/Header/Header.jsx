@@ -11,7 +11,7 @@ export const Header = () => {
               </div>
             
               <h1 
-              className={`text-2xl font-medium bg-gradient-to-r from-purple-200 to-pink-300 bg-clip-text transition-all duration-300`}
+              className={`text-2xl font-medium bg-gradient-to-r from-violet-200 to-pink-300 bg-clip-text transition-all duration-300`}
               >
                 Sofía Chiodi
               </h1>
@@ -24,7 +24,7 @@ export const Header = () => {
               className={`capitalize font-medium transition-all duration-300 hover:scale-105 relative group`}
               >
                 Home
-                <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-200 to-pink-300 transition-all duration-300 group-hover:w-full '></span>
+                <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-200 to-pink-300 transition-all duration-300 group-hover:w-full '></span>
               </button>
             </nav>
 
@@ -37,7 +37,7 @@ export const Header = () => {
           {/* Mobile Menu */}
           <div className='md:hidden bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl mt-2 py-6 border border-purple-100'>
             
-            <button className='block w-full text-left px-6 py-3 texr-gray-500 hover:bg-gradient-to-r hover:from-purple-200 hover:to-pink-300 hover:text-pink-800 capitalize font-medium transition-all duration-300'>Home</button>
+            <button className='block w-full text-left px-6 py-3 texr-gray-500 hover:bg-gradient-to-r hover:from-violet-100 hover:to-pink-200 hover:text-violet-400 capitalize font-medium transition-all duration-150'>Home</button>
           </div>
       </div>
     </header>
