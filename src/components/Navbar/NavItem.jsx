@@ -1,4 +1,5 @@
 export const NavItem = ({ label, isResponsiveMenuOpen }) => {
+  console.log('navitem', isResponsiveMenuOpen)
   return (
     <button
       className={`${
