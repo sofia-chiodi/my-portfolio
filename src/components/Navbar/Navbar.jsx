@@ -1,7 +1,11 @@
 import menuItems from '@/components/Header/menuItems.js'
 import { NavItem } from './NavItem'
 
-export const Navbar = ({ isResponsiveMenuOpen }) => {
+export const Navbar = ({
+  isResponsiveMenuOpen,
+  isScrolled,
+  scrollToSection,
+}) => {
   return (
     <div>
       <nav className="hidden md:flex space-x-8">
@@ -10,6 +14,8 @@ export const Navbar = ({ isResponsiveMenuOpen }) => {
             key={item.label}
             label={item.label}
             isResponsiveMenuOpen={isResponsiveMenuOpen}
+            isScrolled={isScrolled}
+            scrollToSection={scrollToSection}
           >
             {item.label}
           </NavItem>
