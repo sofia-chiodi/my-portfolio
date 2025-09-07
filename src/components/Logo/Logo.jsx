@@ -2,8 +2,8 @@ import { Sparkles } from 'lucide-react'
 
 export const Logo = ({ isScrolled }) => {
   return (
-    <div className=" flex items-center space-x-2">
-      <div className="relative">
+    <div className='flex items-center space-x-2'>
+      <div className='relative'>
         <Sparkles
           strokeWidth={2.1}
           className={`w-8 h-8 transition-all duration-300 ${

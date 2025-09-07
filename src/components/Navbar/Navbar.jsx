@@ -8,7 +8,7 @@ export const Navbar = ({
 }) => {
   return (
     <div>
-      <nav className="hidden md:flex space-x-8">
+      <nav className='hidden md:flex space-x-8'>
         {menuItems.map((item) => (
           <NavItem
             key={item.label}

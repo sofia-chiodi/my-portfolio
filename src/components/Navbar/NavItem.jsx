@@ -20,7 +20,7 @@ export const NavItem = ({
     >
       {label}
       {!isResponsiveMenuOpen && (
-        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-200 to-pink-300 transition-all duration-300 group-hover:w-full "></span>
+        <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-200 to-pink-300 transition-all duration-300 group-hover:w-full '></span>
       )}
     </button>
   )
