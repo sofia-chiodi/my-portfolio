@@ -1,4 +1,5 @@
-import { Card } from '@/components/Card'
+import { Card } from '@/components/Card/Card'
+import skillsList from './skillsList'
 
 export const About = () => {
   return (
@@ -29,8 +30,14 @@ export const About = () => {
           </div>
 
           {/* Stack */}
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
-            <Card />
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {skillsList.map((skill) => (
+              <Card
+                key={skill.id}
+                title={skill.title}
+                description={skill.description}
+              />
+            ))}
           </div>
 
           {/* Contact */}

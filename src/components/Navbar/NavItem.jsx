@@ -14,8 +14,8 @@ export const NavItem = ({
           : 'capitalize font-medium transition-all duration-300 hover:scale-105 relative group'
       } capitalize font-medium transition-all duration-150 ${
         isScrolled
-          ? 'text-gray-700 hover:text-violet-200'
-          : 'text-white hover:text-pink-200'
+          ? 'text-violet-300 hover:text-pink-300'
+          : 'text-white hover:text-pink-300'
       }`}
     >
       {label}
