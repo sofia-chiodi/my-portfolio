@@ -1,5 +1,5 @@
 import { Card } from '@/components/Card/Card'
-import skillsList from './skillsList'
+import skillsList from '../../utils/skillsList'
 
 export const About = () => {
   return (
