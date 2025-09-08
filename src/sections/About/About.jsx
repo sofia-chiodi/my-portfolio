@@ -12,17 +12,16 @@ export const About = () => {
 
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-16'>
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full mb-6'>
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-300 to-pink-100 text-white text-lg rounded-full mb-8'>
               <span>About me</span>
             </div>
 
-            <h2 className='text-4xl md:text-5xl font-bold text-gray-700 mb-6'>
-              I'm a <span>front-end developer</span> from Buenos Aires,
-              Argentina, who loves creating innovative and intuitive experiences
-              for users.
+            <h2 className='text-xl md:text-lg font-bold text-violet-300 mb-6'>
+              I'm a front-end developer from Buenos Aires, Argentina, who loves
+              creating innovative and intuitive experiences for users.
             </h2>
 
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
+            <p className='text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed'>
               I've created this portfolio as a fun way to showcase my projects
               and some of my skills regarding this{' '}
               <span className='text-shadow-2xs'>tech stack</span>:
