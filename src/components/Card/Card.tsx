@@ -1,33 +1,35 @@
 import React from 'react'
 
-import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import {
   SiJavascript,
+  SiReact,
   SiTypescript,
+  SiNodedotjs,
   SiRedux,
+  SiCss3,
   SiTailwindcss,
+  SiHtml5,
   SiStyledcomponents,
+  SiGit,
   SiJest,
   SiVite,
   SiJira,
   SiFigma,
 } from 'react-icons/si'
 import { PiBracketsCurly, PiFileSql } from 'react-icons/pi'
-import { IoLogoCss3 } from 'react-icons/io'
-import { FaHtml5 } from 'react-icons/fa6'
 
 const skillIcons = {
   SiJavascript,
-  FaReact,
+  SiReact,
   SiTypescript,
-  FaNodeJs,
+  SiNodedotjs,
   SiRedux,
   PiBracketsCurly,
-  IoLogoCss3,
+  SiCss3,
   SiTailwindcss,
-  FaHtml5,
+  SiHtml5,
   SiStyledcomponents,
-  FaGitAlt,
+  SiGit,
   PiFileSql,
   SiJest,
   SiVite,
@@ -49,10 +51,10 @@ export const Card = ({ title, description, icon }: CardTypes) => {
             className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
           >
             {SkillIcon ? (
-              <SkillIcon className='text-violet-200' size={50} />
+              <SkillIcon className='text-pink-200' size={50} />
             ) : null}
           </div>
-          <h3 className='text-xl font-semibold text-pink-300 mb-4 relative z-10'>
+          <h3 className='text-xl font-semibold text-violet-300 mb-4 relative z-10'>
             {title}
           </h3>
           <p className='text-gray-600 leading-relaxed relative z-10'>
