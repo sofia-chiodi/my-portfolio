@@ -1,10 +1,10 @@
 const skillsList = [
   { label: 'JS', title: 'JavaScript', icon: 'SiJavascript' },
-  { label: 'React.js', title: 'React', icon: 'faReact' },
+  { label: 'React.js', title: 'React', icon: 'FaReact' },
   { label: 'Typescript', title: 'TypeScript', icon: 'SiTypescript' },
   { label: 'Node.js', title: 'Node.js', icon: 'FaNodeJs' },
   { label: 'Redux', title: 'Redux', icon: 'SiRedux' },
-  { label: 'API rest', title: 'API rest', icon: 'PiBracketsCurl' },
+  { label: 'API rest', title: 'API rest', icon: 'PiBracketsCurly' },
   { label: 'CSS', title: 'CSS', icon: 'IoLogoCss3' },
   { label: 'Tailwind CSS', title: 'Tailwind CSS', icon: 'SiTailwindcss' },
   { label: 'HTML5', title: 'HTML5', icon: 'FaHtml5' },

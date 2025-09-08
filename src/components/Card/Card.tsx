@@ -1,9 +1,45 @@
 import React from 'react'
-import { User } from 'lucide-react'
 
-type CardTypes = { title: string; description: string }
+import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
+import {
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiTailwindcss,
+  SiStyledcomponents,
+  SiJest,
+  SiVite,
+  SiJira,
+  SiFigma,
+} from 'react-icons/si'
+import { PiBracketsCurly, PiFileSql } from 'react-icons/pi'
+import { IoLogoCss3 } from 'react-icons/io'
+import { FaHtml5 } from 'react-icons/fa6'
 
-export const Card = ({ title, description }: CardTypes) => {
+const skillIcons = {
+  SiJavascript,
+  FaReact,
+  SiTypescript,
+  FaNodeJs,
+  SiRedux,
+  PiBracketsCurly,
+  IoLogoCss3,
+  SiTailwindcss,
+  FaHtml5,
+  SiStyledcomponents,
+  FaGitAlt,
+  PiFileSql,
+  SiJest,
+  SiVite,
+  SiJira,
+  SiFigma,
+}
+
+type CardTypes = { title: string; description: string; icon: string }
+
+export const Card = ({ title, description, icon }: CardTypes) => {
+  const SkillIcon = skillIcons[icon]
+
   return (
     <div>
       <div className='group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden h-50'>
@@ -12,7 +48,9 @@ export const Card = ({ title, description }: CardTypes) => {
           <div
             className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
           >
-            <User className='text-violet-300' size={24} />
+            {SkillIcon ? (
+              <SkillIcon className='text-violet-200' size={50} />
+            ) : null}
           </div>
           <h3 className='text-xl font-semibold text-gray-700 mb-4 relative z-10'>
             {title}

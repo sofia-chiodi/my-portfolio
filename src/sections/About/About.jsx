@@ -36,6 +36,7 @@ export const About = () => {
                 key={skill.id}
                 title={skill.title}
                 description={skill.description}
+                icon={skill.icon}
               />
             ))}
           </div>
