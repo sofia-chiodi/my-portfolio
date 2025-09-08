@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react'
 
 import { Logo } from '@/components/Logo/Logo.jsx'
 import { Navbar } from '@/components/Navbar/Navbar.jsx'
-import { ResponsiveNavbar } from '@/components/Navbar/ResponsiveNavbar.jsx'
+import { ResponsiveNavbar } from '@/components/ResponsiveNavbar/ResponsiveNavbar.jsx'
 
 export const Header = () => {
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
@@ -36,18 +36,14 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration ${
         isScrolled
-          ? 'bg-pink-100/60 backdrop-blur-lg shadow-xl'
+          ? 'bg-pink-100/60 backdrop-blur-lg shadow-xl text-violet-300'
           : 'bg-transparent'
       }`}
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center py-4'>
           <Logo isScrolled={isScrolled} />
-          <Navbar
-            isResponsiveMenuOpen={isResponsiveMenuOpen}
-            isScrolled={isScrolled}
-            scrollToSection={scrollToSection}
-          />
+          <Navbar isScrolled={isScrolled} scrollToSection={scrollToSection} />
 
           {/* Responsive Menu Button */}
           <button
@@ -55,9 +51,9 @@ export const Header = () => {
             onClick={toggleResponsiveMenu}
           >
             {isResponsiveMenuOpen ? (
-              <X size={24} strokeWidth={2.1} />
+              <X size={24} strokeWidth={2.1} className='text-violet-300' />
             ) : (
-              <Menu size={24} strokeWidth={2.1} />
+              <Menu size={24} strokeWidth={2.1} className='text-violet-300' />
             )}
           </button>
         </div>
@@ -66,7 +62,6 @@ export const Header = () => {
         {isResponsiveMenuOpen && (
           <ResponsiveNavbar
             isResponsiveMenuOpen={isResponsiveMenuOpen}
-            isScrolled={isScrolled}
             scrollToSection={scrollToSection}
           />
         )}

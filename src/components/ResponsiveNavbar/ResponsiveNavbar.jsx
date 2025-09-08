@@ -1,16 +1,17 @@
 import menuItems from '@/components/Header/menuItems.js'
-import { NavItem } from './NavItem'
+import { ResponsiveNavItem } from './ResponsiveNavItem'
 
 export const ResponsiveNavbar = ({ isResponsiveMenuOpen, scrollToSection }) => {
   console.log('responsive', isResponsiveMenuOpen)
   return (
-    <div className='md:hidden bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl mt-2 py-6 border border-purple-100'>
+    <div className='animate-fade-in-delay-1 md:hidden w-full bg-white/30 backdrop-blur-md shadow-xl rounded-xl mt-2 py-6 flex flex-col items-start space-y-2 px-4'>
       {menuItems.map((item) => (
-        <NavItem
+        <ResponsiveNavItem
           key={item.label}
           label={item.label}
           isResponsiveMenuOpen={isResponsiveMenuOpen}
           scrollToSection={scrollToSection}
+          className='text-pink-300'
         />
       ))}
     </div>
