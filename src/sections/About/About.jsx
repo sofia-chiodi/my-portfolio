@@ -5,8 +5,7 @@ export const About = () => {
   return (
     <section id='about'>
       <div className='min-h-screen py-20 bg-gradient-to-r from-gray-50 to-white relative overflow-hidden'>
-        {/* Background */}
-        <div className='absolute inset-0 opacity-30'>
+        <div className='absolute inset-0 opacity-25'>
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-300 to-pink-600 transform rotate-12 scale-150'></div>
         </div>
 

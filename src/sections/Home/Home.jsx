@@ -22,7 +22,7 @@ export const Home = () => {
                   developer
                 </span>
               </h1>
-              <p className='text-lg text-white mb-8 leading-relaxed max-w-lg animate-fade-in-delay-1'>
+              <p className='text-lg text-white mb-8 leading-relaxed max-w-lg animate-fade-in-delay-3'>
                 Specialized in front-end technologies.
               </p>
 

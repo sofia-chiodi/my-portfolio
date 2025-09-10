@@ -6,12 +6,20 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
+.animate-fade-in-delay {
+  animation: fadeInDelay 0.5s ease-in-out forwards;
+}
+
 .animate-fade-in-delay-1 {
   animation: fadeInDelay 1s ease-in-out forwards;
 }
 
 .animate-fade-in-delay-2 {
   animation: fadeInDelay 2s ease-in-out forwards;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeInDelay 3s ease-in-out forwards;
 }
 
 @keyframes fadeInDelay {
