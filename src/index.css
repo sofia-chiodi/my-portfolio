@@ -6,6 +6,33 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
+/* Keyframes */
+
+/* Fade in */
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animations */
+
+/* Fade in */
 .animate-fade-in-delay {
   animation: fadeInDelay 0.5s ease-in-out forwards;
 }
@@ -20,15 +47,4 @@ body {
 
 .animate-fade-in-delay-3 {
   animation: fadeInDelay 3s ease-in-out forwards;
-}
-
-@keyframes fadeInDelay {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

@@ -18,7 +18,7 @@ export const Logo = ({ isScrolled }) => {
 
       <h1
         className={
-          'text-2xl font-medium bg-gradient-to-r from-violet-200 to-pink-300 bg-clip-text transition-all duration-300'
+          'text-3xl font-medium bg-gradient-to-r from-violet-200 to-pink-300 bg-clip-text transition-all duration-300'
         }
       >
         Sofía Chiodi

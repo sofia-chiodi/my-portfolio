@@ -9,18 +9,22 @@ export const About = () => {
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-300 via-pink-300 to-pink-600 transform rotate-12 scale-150'></div>
         </div>
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10'>
           <div className='text-center mb-16'>
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-300 to-pink-100 text-white text-lg rounded-full mb-8'>
-              <span>About me</span>
+            <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200  text-3xl rounded-full mb-8 font-bold'>
+              <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300'>
+                ✨ About Me ✨
+              </span>
             </div>
 
-            <h2 className='text-xl md:text-lg font-bold text-violet-300 mb-6'>
-              I'm a front-end developer from Buenos Aires, Argentina, who loves
-              creating innovative and intuitive experiences for users.
-            </h2>
+            <p className='mt-6 text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300 mb-6 max-w-3xl mx-auto '>
+              I'm a{' '}
+              <span className='font-bold text-violet-300/80'>front-end</span>{' '}
+              developer from 📍 Buenos Aires, Argentina, who loves creating
+              innovative and intuitive experiences for users.
+            </p>
 
-            <p className='text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed'>
+            <p className='mt-6 text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-violet-300/50 mb-6 max-w-3xl mx-auto'>
               I've created this portfolio as a fun way to showcase my projects
               and some of my skills regarding this{' '}
               <span className='text-shadow-2xs'>tech stack</span>:
@@ -28,7 +32,7 @@ export const About = () => {
           </div>
 
           {/* Stack */}
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {skillsList.map((skill) => (
               <Card
                 key={skill.id}

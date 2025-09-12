@@ -54,7 +54,7 @@ export const Card = ({ title, description, icon }: CardTypes) => {
               <SkillIcon className='text-pink-200' size={45} />
             ) : null}
           </div>
-          <h3 className='text-xl font-semibold text-violet-300 mb-4 relative z-10'>
+          <h3 className='text-xl font-semibold text-violet-300 mb-4 relative z-10 leading-tight'>
             {title}
           </h3>
           <p className='text-gray-600 leading-relaxed relative z-10'>
