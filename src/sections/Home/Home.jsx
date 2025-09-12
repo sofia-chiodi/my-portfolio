@@ -100,7 +100,7 @@ export const Home = () => {
                   </div>
 
                   <div className='flex items-center space-x-4 p-4 bg-white/10 backdrop:blur-md rounded-2xl'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-red-200 to-slate-300 rounded-2xl flex items-center justify-center'>
+                    <div className='w-12 h-12 bg-gradient-to-r from-red-200 to-green-200 rounded-2xl flex items-center justify-center'>
                       <span className='text-white font-semibold'>UX/UI</span>
                     </div>
                     <div>

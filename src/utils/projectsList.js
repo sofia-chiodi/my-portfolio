@@ -20,6 +20,7 @@ const projectsList = [
     ],
     github: 'https://github.com/sofia-chiodi/grupo-13',
     demo: '',
+    bgColor: 'bg-blue-200',
   },
   {
     id: 'project-2',
@@ -29,6 +30,7 @@ const projectsList = [
     stack: ['JavaScript', 'React', 'Node.js', 'CSS', 'HTML5', 'Git', 'Vite'],
     github: 'https://github.com/sofia-chiodi/project-tictactoe',
     demo: '',
+    bgColor: 'bg-gradient-to-br from-violet-200 to-pink-200',
   },
 ]
 
