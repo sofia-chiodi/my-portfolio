@@ -5,7 +5,7 @@ export const Home = () => {
     <>
       <section
         id='home'
-        className='min-h-screen py-30 flex items-center relative  overflow-hidden bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
+        className='min-h-screen py-32 flex items-center relative overflow-hidden bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
       >
         <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10'>
           <div className='md:grid md:grid-cols-2 md:gap-20 lg:gap-35 items-center'>
