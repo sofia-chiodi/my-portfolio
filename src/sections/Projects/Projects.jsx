@@ -1,4 +1,4 @@
-import projectsList from '@/utils/projectsList'
+import projectList from '@/utils/projectList'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 export const Projects = () => {
@@ -30,7 +30,7 @@ export const Projects = () => {
 
         {/* Projects */}
         <div className={`grid grid-cols-1 gap-8 max-w-7xl mx-auto`}>
-          {projectsList.map((project, index) => {
+          {projectList.map((project, index) => {
             return (
               <div
                 key={index}

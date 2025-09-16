@@ -3,7 +3,8 @@ const projectsList = [
     id: 'project-1',
     title: 'E-Beer',
     description:
-      'Responsive full-stack website for a beer-selling e-commerce integrating both backend and frontend as a group thesis to the fullstack web developer Programme',
+      'Responsive full-stack website for an e-commerce, that integrates frontend and backend',
+    category: ['web', 'ecommerce'],
     image: 'e-beer.png',
     stack: [
       'JavaScript',
@@ -30,6 +31,7 @@ const projectsList = [
     id: 'project-2',
     title: 'Tic-tac-toe',
     description: 'Cute tic-tac-toe game',
+    category: ['web', 'game'],
     image: 'tic-tac-toe.png',
     stack: ['JavaScript', 'React', 'Node.js', 'CSS', 'HTML5', 'Git', 'Vite'],
     github: 'https://github.com/sofia-chiodi/project-tictactoe',
@@ -43,6 +45,7 @@ const projectsList = [
     id: 'project-3',
     title: 'Project 3',
     description: 'Description of project 3',
+    category: 'web',
     image: 'project-3.png',
     stack: ['stack1', 'stack2', 'stack3'],
     github: '',
