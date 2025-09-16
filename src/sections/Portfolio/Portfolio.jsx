@@ -9,7 +9,7 @@ export const Portfolio = () => {
   const filteredProjects =
     activeFilter === 'all'
       ? projectList
-      : projectList.filter((project) => project.type === activeFilter)
+      : projectList.filter((project) => project.category.includes(activeFilter))
 
   return (
     <section
@@ -17,8 +17,8 @@ export const Portfolio = () => {
       className='min-h-screen py-32 bg-gradient-to-r from-gray-50 to-white relative overflow-hidden'
     >
       {/* Background */}
-      <div className='absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-violet-200 to pink-200 rounded-full filter blur-3xl opacity-30'></div>
-      <div className='absolute bottom-1/4 right-0 w-72 h-72 bg-gradient-to-l from-indigo-200 to-magenta-200 rounded-full filter blur-3xl opacity-30'></div>
+      <div className='absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-violet-200 to-transparent rounded-full translate-x-48'></div>
+      <div className='absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-l from-pink-200 to-transparent rounded-full translate-y-48'></div>
 
       <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
         <div className='text-center mb-16'>
@@ -44,10 +44,10 @@ export const Portfolio = () => {
               <button
                 onClick={() => setActiveFilter(filter.id)}
                 key={filter.id}
-                className={`px-6 py-3 rounded-3xl font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-3xl font-semibold transition-all duration-100 ${
                   activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-violet-200/50 to-pink-200/50'
-                    : 'bg-transparent'
+                    ? 'bg-gradient-to-r from-violet-200 to-pink-200 text-white shadow-lg scale-105'
+                    : 'bg-transparent text-gray-400 hover:bg-pink-50 border border-gray-200 hover:border-pink-100'
                 }`}
               >
                 {filter.label}

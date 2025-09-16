@@ -1,7 +1,7 @@
 const menuItems = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Projects', path: '/projects' },
+  { label: 'Portfolio', path: '/portfolio' },
   { label: 'Contact', path: '/contact' },
 ]
 

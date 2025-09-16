@@ -45,7 +45,7 @@ const projectsList = [
     id: 'project-3',
     title: 'Project 3',
     description: 'Description of project 3',
-    category: 'web',
+    category: 'mobile',
     image: 'project-3.png',
     stack: ['stack1', 'stack2', 'stack3'],
     github: '',

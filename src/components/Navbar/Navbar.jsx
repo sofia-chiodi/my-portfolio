@@ -1,4 +1,4 @@
-import menuItems from '@/components/Header/menuItems.js'
+import menuItems from '@/utils/menuItems.js'
 import { NavItem } from './NavItem'
 
 export const Navbar = ({

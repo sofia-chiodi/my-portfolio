@@ -3,7 +3,7 @@ const projectFilters = [
   { id: 'web', label: 'Web' },
   { id: 'mobile', label: 'Mobile' },
   { id: 'ecommerce', label: 'E-commerce' },
-  { id: 'game', label: 'Game' },
+  { id: 'game', label: 'Games' },
 ]
 
 export default projectFilters
