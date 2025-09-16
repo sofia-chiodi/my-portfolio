@@ -33,9 +33,9 @@ export const About = () => {
 
           {/* Stack */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-            {skillsList.map((skill) => (
+            {skillsList.map((skill, skillIndex) => (
               <Card
-                key={skill.id}
+                key={skillIndex}
                 title={skill.title}
                 description={skill.description}
                 icon={skill.icon}
