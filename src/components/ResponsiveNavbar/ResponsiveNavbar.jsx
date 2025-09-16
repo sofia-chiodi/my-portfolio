@@ -1,4 +1,4 @@
-import menuItems from '@/components/Header/menuItems.js'
+import menuItems from '@/utils/menuItems.js'
 import { ResponsiveNavItem } from './ResponsiveNavItem'
 
 export const ResponsiveNavbar = ({

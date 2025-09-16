@@ -3,7 +3,7 @@ const projectsList = [
     id: 'project-1',
     title: 'E-Beer',
     description:
-      'Responsive full-stack website for an e-commerce, that integrates frontend and backend',
+      'Responsive full-stack website for an e-commerce, that integrates both frontend and backend',
     category: ['web', 'ecommerce'],
     image: 'e-beer.png',
     stack: [
@@ -22,10 +22,6 @@ const projectsList = [
     ],
     github: 'https://github.com/sofia-chiodi/grupo-13',
     demo: '',
-    textColor: 'text-orange-300/80',
-    titleColor: 'text-orange-400/75',
-    bgColor: 'from-orange-50/90 to-yellow-50/90',
-    borderColor: 'from-orange-400 via-orange-300 to-yellow-400/90',
   },
   {
     id: 'project-2',
@@ -36,24 +32,16 @@ const projectsList = [
     stack: ['JavaScript', 'React', 'Node.js', 'CSS', 'HTML5', 'Git', 'Vite'],
     github: 'https://github.com/sofia-chiodi/project-tictactoe',
     demo: '',
-    textColor: 'text-pink-300/80',
-    titleColor: 'text-pink-400/75',
-    bgColor: 'from-pink-50/90 to-magenta-50/90',
-    borderColor: 'from-pink-400 via-pink-300 to-magenta-400/90',
   },
   {
     id: 'project-3',
     title: 'Project 3',
     description: 'Description of project 3',
-    category: 'mobile',
+    category: ['mobile'],
     image: 'project-3.png',
     stack: ['stack1', 'stack2', 'stack3'],
     github: '',
     demo: '',
-    textColor: 'text-teal-300/80',
-    titleColor: 'text-teal-400/75',
-    bgColor: 'from-teal-50/90 to-cyan-50/90',
-    borderColor: 'from-teal-400 via-teal-300 to-cyan-400/90',
   },
 ]
 

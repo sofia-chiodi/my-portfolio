@@ -73,10 +73,10 @@ export const Portfolio = () => {
 
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-200'>
                     <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
-                      <div className='flex space-x-2'>
-                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1'>
+                      <div className='flex space-x-3'>
+                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-300'>
                           <FaExternalLinkAlt
-                            className='text-pink-200'
+                            className='text-violet-300'
                             size={14}
                           />
                           <a href={project.demo}></a>
@@ -85,8 +85,8 @@ export const Portfolio = () => {
                           </span>
                         </div>
 
-                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1'>
-                          <FaGithub className='text-pink-200' size={18} />
+                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-300'>
+                          <FaGithub className='text-violet-300' size={18} />
                           <a href=''></a>
                           <span className='text-white text-xs font-medium'>
                             Repository
@@ -96,7 +96,7 @@ export const Portfolio = () => {
 
                       <button className='w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300'>
                         <FaExternalLinkAlt
-                          className='text-gray-500'
+                          className='text-gray-300'
                           size={18}
                         />
                       </button>
@@ -105,10 +105,10 @@ export const Portfolio = () => {
                 </div>
 
                 <div className='p-6'>
-                  <div className='text-sm text-violet-400 font-semibold mb-2'>
+                  <div className='text-sm text-gray-300 font-semibold mb-2'>
                     {project.category}
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-violet-300 transition-all duration-300'>
+                  <h3 className='text-xl font-bold text-violet-400/60 mb-3 group-hover:text-pink-300 transition-all duration-300'>
                     {project.title}
                   </h3>
                   <p className='text-gray-500 mb-4 leading-relaxed'>
@@ -120,7 +120,7 @@ export const Portfolio = () => {
                       return (
                         <span
                           key={stackIndex}
-                          className='px-3 py-1 bg-gradient-to-r from violet-50 to-pink-50 text-violet-300 text-xs font-medium rounded-full border border-violet-100'
+                          className='px-3 py-1 bg-gradient-to-r from-violet-50/50 to-violet-50 text-violet-300 text-xs font-medium rounded-full border border-violet-100'
                         >
                           {stack}
                         </span>
