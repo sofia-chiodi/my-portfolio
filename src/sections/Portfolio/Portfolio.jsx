@@ -68,7 +68,7 @@ export const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className='w-full h-64 object-cover group-hover:scale-110 transition-all duration-500'
+                    className='w-full h-64 object-cover group-hover:scale-110 transition-all duration-500 '
                   />
 
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-200'>
@@ -94,7 +94,7 @@ export const Portfolio = () => {
                         </div>
                       </div>
 
-                      <button className='w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300'>
+                      <button className='w-10 h-10 bg-gray-100/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300'>
                         <FaExternalLinkAlt
                           className='text-gray-300'
                           size={18}
