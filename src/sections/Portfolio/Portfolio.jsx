@@ -74,7 +74,7 @@ export const Portfolio = () => {
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-200'>
                     <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
                       <div className='flex space-x-3'>
-                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-300'>
+                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-100'>
                           <FaExternalLinkAlt
                             className='text-violet-300'
                             size={14}
@@ -87,7 +87,7 @@ export const Portfolio = () => {
 
                         <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-300'>
                           <FaGithub className='text-violet-300' size={18} />
-                          <a href=''></a>
+                          <a href={project.github}></a>
                           <span className='text-white text-xs font-medium'>
                             Repository
                           </span>
@@ -99,6 +99,7 @@ export const Portfolio = () => {
                           className='text-gray-300'
                           size={18}
                         />
+                        <a href={project.github}></a>
                       </button>
                     </div>
                   </div>
