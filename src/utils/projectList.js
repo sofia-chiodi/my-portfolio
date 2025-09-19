@@ -5,7 +5,7 @@ const projectsList = [
     description:
       'Responsive full-stack website for an e-commerce, that integrates both frontend and backend',
     category: ['web', 'ecommerce'],
-    image: '../public/images/e-beer.png',
+    image: 'images/e-beer.png',
     stack: [
       'JavaScript',
       'React',
@@ -28,7 +28,7 @@ const projectsList = [
     title: 'Tic-tac-toe',
     description: 'Cute tic-tac-toe game',
     category: ['web', 'game'],
-    image: '../public/images/tic-tac-toe.png',
+    image: 'images/tic-tac-toe.png',
     stack: ['JavaScript', 'React', 'Node.js', 'CSS', 'HTML5', 'Git', 'Vite'],
     github: 'https://github.com/sofia-chiodi/project-tictactoe',
     demo: '',
@@ -38,7 +38,7 @@ const projectsList = [
     title: 'Project 3',
     description: 'Description of project 3',
     category: ['mobile'],
-    image: '../public/images/project-3.png',
+    image: 'images/project-3.png',
     stack: ['stack1', 'stack2', 'stack3'],
     github: '',
     demo: '',
