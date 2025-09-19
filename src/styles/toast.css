@@ -1,0 +1,16 @@
+.Toastify__toast {
+  border-radius: 12px;
+  color: #da8bcd;
+  font-weight: 560;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(16px);
+  background: linear-gradient(
+    135deg,
+    rgba(216, 180, 254, 0.15),
+    rgba(249, 168, 212, 0.15)
+  );
+}
+
+.Toastify__progress-bar {
+  background: rgba(249, 168, 212, 0.8);
+}

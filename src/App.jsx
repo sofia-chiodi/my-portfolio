@@ -3,6 +3,9 @@ import { Home } from '@/sections/Home/Home.jsx'
 import { About } from '@/sections/About/About.jsx'
 import { Portfolio } from '@/sections/Portfolio/Portfolio.jsx'
 import { Contact } from '@/sections/Contact/Contact.jsx'
+import 'react-toastify/dist/ReactToastify.css'
+import '@/styles/toast.css'
+import { Toast } from '@/components/ui/Toast'
 
 function App() {
   return (
@@ -12,6 +15,7 @@ function App() {
       <About />
       <Portfolio />
       <Contact />
+      <Toast />
     </>
   )
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { showToast } from '@/utils/toastConfig'
 
 import { IoIosSend } from 'react-icons/io'
+
 import contactLinks from '@/utils/contactLinks'
 
 export const Contact = () => {
@@ -12,7 +14,10 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+
+    setTimeout(() => {
+      showToast('Message sent! Thank you for your contact')
+    }, 1000)
   }
 
   const handleChange = (e) => {
@@ -49,7 +54,7 @@ export const Contact = () => {
           </h2>
         </div>
 
-        <div className='grid grid-cols-3 gap-4 mb-16'>
+        <div className='grid grid-cols-3 gap-10 mb-16'>
           {contactLinks.map((link, linkIndex) => {
             return (
               <div
