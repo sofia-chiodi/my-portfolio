@@ -1,15 +1,36 @@
-import { FaGithub } from 'react-icons/fa'
+import { useState } from 'react'
+
 import { IoIosSend } from 'react-icons/io'
+import contactLinks from '@/utils/contactLinks'
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+  }
+
+  const handleChange = (e) => {
+    e.preventDefault()
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   return (
     <section
       id='contact'
       className='min-h-screen py-32 relative overflow-hidden'
     >
       {/* Background */}
-      <div className='absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-100 to-pink-100 rounded-full filter blur-3xl opacity-50 -translate-y-48'></div>
-      <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-pink-100 to-violet-100 rounded-full filter blur-3xl opacity-50 translate-y-48'></div>
+      <div className='absolute top-0 w-96 h-96 bg-gradient-to-l from-pink-200 to-transparent rounded-full filter blur-xl opacity-60 -translate-y-48'></div>
+      <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-pink-200 to-violet-200 rounded-full filter blur-xl opacity-60 translate-y-48'></div>
 
       <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
         <div className='text-center mb-16'>
@@ -26,20 +47,30 @@ export const Contact = () => {
             here:
           </h2>
 
-          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16'>
-            <div className='group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center'>
-              <div
-                className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300`}
-              >
-                <FaGithub className='text-violet-300' size={24} />
-              </div>
-              <h3 className='text-lg font-bold text-gray-700 mb-2'>Title</h3>
-              <p className='text-sm text-gray-500 mb-3'>Description</p>
+          <div className='grid grid-cols-3 gap-4 mb-16'>
+            {contactLinks.map((link, linkIndex) => {
+              return (
+                <div
+                  className='group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center'
+                  key={linkIndex}
+                >
+                  <a href={link.link} target='_blank' rel='noopener noreferrer'>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${link.bgColor}`}
+                    >
+                      <link.icon className='text-white' size={24} />
+                    </div>
+                  </a>
 
-              <div className='space-y-2'>
-                <p className='text-sm font-medium text-gray-700 '>Details</p>
-              </div>
-            </div>
+                  <h3 className='text-lg font-bold text-gray-700 mb-2'>
+                    {link.title}
+                  </h3>
+                  <p className='text-sm text-gray-500 mb-3'>
+                    {link.description}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -56,7 +87,7 @@ export const Contact = () => {
             </p>
           </div>
 
-          <form className='space-y-6'>
+          <form className='space-y-6' onSubmit={handleSubmit}>
             <div className='grid grid-cols-2 gap-6'>
               <div>
                 <label
@@ -71,6 +102,8 @@ export const Contact = () => {
                   name='name'
                   placeholder='Full name'
                   className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+                  required
+                  onChange={handleChange}
                 />
               </div>
               <div>
@@ -86,6 +119,8 @@ export const Contact = () => {
                   name='email'
                   placeholder='Email'
                   className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -101,6 +136,8 @@ export const Contact = () => {
                 name='message'
                 placeholder='Message'
                 className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+                required
+                onChange={handleChange}
               ></textarea>
             </div>
 

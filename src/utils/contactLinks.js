@@ -1,15 +1,32 @@
+import { IoLogoGithub, IoLogoLinkedin, IoIosMail } from 'react-icons/io'
+
+const Icon = {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoIosMail,
+}
+
 const contactLinks = [
   {
-    icon: 'IoIosMail',
+    title: 'Email',
+    icon: Icon.IoIosMail,
     link: 'mailto:chiodi.sb@gmail.com',
+    description: 'chiodi.sb@gmail.com',
+    bgColor: 'bg-pink-200/70',
   },
   {
-    icon: 'IoIosCall',
-    link: 'tel:+5493516255222',
+    title: 'LinkedIn',
+    icon: Icon.IoLogoLinkedin,
+    link: 'https://www.linkedin.com/in/sb-chiodi/',
+    description: 'in/sb-chiodi',
+    bgColor: 'bg-blue-200/70',
   },
   {
-    icon: 'IoLogoGithub',
-    link: 'https://github.com/soffch',
+    title: 'Github',
+    icon: Icon.IoLogoGithub,
+    link: 'https://github.com/sofia-chiodi',
+    description: '/sofia-chiodi',
+    bgColor: 'bg-zinc-200/70',
   },
 ]
 
