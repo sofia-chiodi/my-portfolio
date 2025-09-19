@@ -39,6 +39,7 @@ export const Contact = () => {
               ✨ Contact me ✨
             </span>
           </div>
+
           <h2 className='mt-8 text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-6 leading-tight'>
             Check out my{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-pink-300 to-violet-300'>
@@ -46,32 +47,32 @@ export const Contact = () => {
             </span>
             here:
           </h2>
+        </div>
 
-          <div className='grid grid-cols-3 gap-4 mb-16'>
-            {contactLinks.map((link, linkIndex) => {
-              return (
+        <div className='grid grid-cols-3 gap-4 mb-16'>
+          {contactLinks.map((link, linkIndex) => {
+            return (
+              <div
+                className='group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center'
+                key={linkIndex}
+              >
                 <div
-                  className='group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center'
-                  key={linkIndex}
+                  className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${link.bgColor}`}
                 >
-                  <a href={link.link} target='_blank' rel='noopener noreferrer'>
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${link.bgColor}`}
-                    >
-                      <link.icon className='text-white' size={24} />
-                    </div>
-                  </a>
-
-                  <h3 className='text-lg font-bold text-gray-700 mb-2'>
-                    {link.title}
-                  </h3>
-                  <p className='text-sm text-gray-500 mb-3'>
-                    {link.description}
-                  </p>
+                  <link.icon className='text-white' size={24} />
                 </div>
-              )
-            })}
-          </div>
+                <h3 className='text-lg font-bold text-gray-700 mb-2'>
+                  {link.title}
+                </h3>
+
+                <p className='text-sm text-gray-500 mb-3'>
+                  <a href={link.link} target='_blank' rel='noopener noreferrer'>
+                    {link.description}
+                  </a>
+                </p>
+              </div>
+            )
+          })}
         </div>
       </div>
 
