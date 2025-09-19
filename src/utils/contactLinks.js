@@ -1,4 +1,4 @@
-const socialLinks = [
+const contactLinks = [
   {
     icon: 'IoIosMail',
     link: 'mailto:chiodi.sb@gmail.com',
@@ -13,4 +13,4 @@ const socialLinks = [
   },
 ]
 
-export default socialLinks
+export default contactLinks
