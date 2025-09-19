@@ -1,4 +1,5 @@
 import { FaGithub } from 'react-icons/fa'
+import { IoIosSend } from 'react-icons/io'
 
 export const Contact = () => {
   return (
@@ -40,6 +41,77 @@ export const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Contact form */}
+      <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 grid grid-cols-2 gap-12'>
+        <div className='bg-white rounded-3xl shadow-xl p-8 border border-gray-100'>
+          <div className='mb-8'>
+            <h3 className='text-2xl font-bold text-violet-300 mb-2'>
+              Get in touch!
+            </h3>
+            <p className='text-gray-600'>
+              Fill out this form to send me a message 📩
+            </p>
+          </div>
+
+          <form className='space-y-6'>
+            <div className='grid grid-cols-2 gap-6'>
+              <div>
+                <label
+                  htmlFor='name'
+                  className='block text-sm font-semibold text-gray-600 mb-2'
+                >
+                  Full Name <span className='text-pink-400'>*</span>
+                </label>
+                <input
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='Full name'
+                  className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor='email'
+                  className='block text-sm font-semibold text-gray-600 mb-2'
+                >
+                  Email <span className='text-pink-400'>*</span>
+                </label>
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  placeholder='Email'
+                  className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor='message'
+                className='block text-sm font-semibold text-gray-600 mb-2'
+              >
+                Message <span className='text-pink-400'>*</span>
+              </label>
+              <textarea
+                id='message'
+                name='message'
+                placeholder='Message'
+                className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
+              ></textarea>
+            </div>
+
+            <button className='w-fit px-6 py-3 font-semibold flex items-center justify-center bg-gradient-to-r from-violet-200 to-pink-200 text-white rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-md'>
+              Send message
+              <IoIosSend
+                className='ml-2 hover:scale-110 transition-all duration-300'
+                size={18}
+              />
+            </button>
+          </form>
         </div>
       </div>
     </section>
