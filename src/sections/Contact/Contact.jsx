@@ -12,11 +12,16 @@ export const Contact = () => {
     message: '',
   })
 
+  const [isSubmiting, setIsSubmiting] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    setIsSubmiting(true)
+
     setTimeout(() => {
-      showToast('Message sent! Thank you for your contact')
+      showToast('Message sent! Thank you for your contact'),
+        setIsSubmiting(false)
     }, 1000)
   }
 
@@ -147,8 +152,11 @@ export const Contact = () => {
               ></textarea>
             </div>
 
-            <button className='w-fit px-6 py-3 font-semibold flex items-center justify-center bg-gradient-to-r from-violet-200 to-pink-200 text-white rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-md'>
-              Send message
+            <button
+              className='w-fit px-6 py-3 font-semibold flex items-center justify-center bg-gradient-to-r from-violet-200 to-pink-200 text-white rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-md'
+              disabled={isSubmiting}
+            >
+              {isSubmiting ? 'Sending...' : 'Send message'}
               <IoIosSend
                 className='ml-2 hover:scale-110 transition-all duration-300'
                 size={18}
