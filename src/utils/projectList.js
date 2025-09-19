@@ -20,8 +20,8 @@ const projectsList = [
       'Sequelize',
       'Postman',
     ],
-    github: 'https://github.com/sofia-chiodi/grupo-13',
-    demo: '',
+    githubUrl: 'https://github.com/sofia-chiodi/grupo-13',
+    demoUrl: '',
   },
   {
     id: 'project-2',
@@ -30,8 +30,8 @@ const projectsList = [
     category: ['web', 'game'],
     image: 'images/tic-tac-toe.png',
     stack: ['JavaScript', 'React', 'Node.js', 'CSS', 'HTML5', 'Git', 'Vite'],
-    github: 'https://github.com/sofia-chiodi/project-tictactoe',
-    demo: '',
+    githubUrl: 'https://github.com/sofia-chiodi/project-tictactoe',
+    demoUrl: '',
   },
   {
     id: 'project-3',
@@ -40,8 +40,8 @@ const projectsList = [
     category: ['mobile'],
     image: 'images/project-3.png',
     stack: ['stack1', 'stack2', 'stack3'],
-    github: '',
-    demo: '',
+    githubUrl: '',
+    demoUrl: '',
   },
 ]
 

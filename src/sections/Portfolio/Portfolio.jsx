@@ -68,38 +68,55 @@ export const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className='w-full h-64 object-cover group-hover:scale-110 transition-all duration-500 '
+                    className='w-full h-72 object-cover group-hover:scale-110 transition-all duration-500'
                   />
 
                   <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-200'>
                     <div className='absolute bottom-4 left-4 right-4 flex justify-between items-end'>
                       <div className='flex space-x-3'>
-                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-100'>
-                          <FaExternalLinkAlt
-                            className='text-violet-300'
-                            size={14}
-                          />
-                          <a href={project.demo}></a>
-                          <span className='text-white text-xs font-medium'>
-                            Demo
-                          </span>
+                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 hover:scale-110 transition-all duration-100'>
+                          <a
+                            href={project.demoUrl}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='flex items-center space-x-1'
+                          >
+                            <FaExternalLinkAlt
+                              className='text-violet-300'
+                              size={14}
+                            />
+                            <span className='text-white text-xs font-medium'>
+                              Demo
+                            </span>
+                          </a>
                         </div>
 
-                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 hover:scale-110 transition-all duration-300'>
-                          <FaGithub className='text-violet-300' size={18} />
-                          <a href={project.github}></a>
-                          <span className='text-white text-xs font-medium'>
-                            Repository
-                          </span>
+                        <div className='flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 hover:scale-110 transition-all duration-300'>
+                          <a
+                            href={project.githubUrl}
+                            target='_blank'
+                            className='flex items-center space-x-1'
+                            rel='noopener noreferrer'
+                          >
+                            <FaGithub className='text-violet-300' size={16} />
+                            <span className='text-white text-xs font-medium'>
+                              Repository
+                            </span>
+                          </a>
                         </div>
                       </div>
 
                       <button className='w-10 h-10 bg-gray-100/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300'>
-                        <FaExternalLinkAlt
-                          className='text-gray-300'
-                          size={18}
-                        />
-                        <a href={project.github}></a>
+                        <a
+                          href={project.githubUrl}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <FaExternalLinkAlt
+                            className='text-gray-300'
+                            size={18}
+                          />
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -128,13 +145,19 @@ export const Portfolio = () => {
                       )
                     })}
                   </div>
-
                   <button className='group/btn inline-flex items-center text-violet-400 font-semibold hover:text-pink-400 transition-all duration-300'>
-                    View Project{' '}
-                    <FaArrowRight
-                      size={16}
-                      className='ml-2 group-hover/btn:translate-x-1 transition-transform duration-300'
-                    />
+                    <a
+                      href={project.githubUrl}
+                      target='_blank'
+                      className='flex flex-row items-center'
+                      rel='noopener noreferrer'
+                    >
+                      View Project{' '}
+                      <FaArrowRight
+                        size={16}
+                        className='ml-2 group-hover/btn:translate-x-1 transition-transform duration-300'
+                      />
+                    </a>
                   </button>
                 </div>
               </div>
