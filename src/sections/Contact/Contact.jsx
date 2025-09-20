@@ -1,9 +1,20 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { showToast } from '@/utils/toastConfig'
-
+import contactLinks from '@/utils/contactLinks'
 import { IoIosSend } from 'react-icons/io'
 
-import contactLinks from '@/utils/contactLinks'
+const EMAILJS_KEY = import.meta.env.VITE_EMAILJS_KEY
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+
+emailjs.init(EMAILJS_KEY)
+
+console.log('EmailJS Info:', {
+  EMAILJS_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+})
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +30,21 @@ export const Contact = () => {
 
     setIsSubmiting(true)
 
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_KEY)
+      .then(
+        (result) => {
+          console.log(result.text)
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          })
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
     setTimeout(() => {
       showToast('Message sent! Thank you for your contact'),
         setIsSubmiting(false)
@@ -111,6 +137,7 @@ export const Contact = () => {
                   type='text'
                   id='name'
                   name='name'
+                  value={formData.name}
                   placeholder='Full name'
                   className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
                   required
@@ -128,6 +155,7 @@ export const Contact = () => {
                   type='email'
                   id='email'
                   name='email'
+                  value={formData.email}
                   placeholder='Email'
                   className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
                   required
@@ -145,6 +173,7 @@ export const Contact = () => {
               <textarea
                 id='message'
                 name='message'
+                value={formData.message}
                 placeholder='Message'
                 className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-100 focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white'
                 required
