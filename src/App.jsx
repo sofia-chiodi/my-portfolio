@@ -4,6 +4,7 @@ import { About } from '@/sections/About/About.jsx'
 import { Portfolio } from '@/sections/Portfolio/Portfolio.jsx'
 import { Contact } from '@/sections/Contact/Contact.jsx'
 import { Footer } from '@/components/Footer/Footer.jsx'
+import { ScrollToTopButton } from '@/components/ScrollToTopButton/ScrollToTopButton.jsx'
 import 'react-toastify/dist/ReactToastify.css'
 import '@/styles/toast.css'
 import { Toast } from '@/components/ui/Toast'
@@ -18,6 +19,7 @@ function App() {
       <Contact />
       <Toast />
       <Footer />
+      <ScrollToTopButton />
     </>
   )
 }

@@ -6,7 +6,7 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
-/* Keyframes */
+/* KEYFRAMES */
 
 /* Fade in */
 @keyframes fadeInDelay {
@@ -20,17 +20,20 @@ body {
   }
 }
 
-/* Typewriter animation */
-@keyframes typing {
-  from {
-    width: 0;
+/* Bounce */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    width: 100%;
+  50% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-/* Animations */
+/* ANIMATIONS */
 
 /* Fade in */
 .animate-fade-in-delay {
@@ -47,4 +50,9 @@ body {
 
 .animate-fade-in-delay-3 {
   animation: fadeInDelay 3s ease-in-out forwards;
+}
+
+/* Bounce */
+.animate-button-bounce {
+  animation: bounce 0.9s infinite;
 }
