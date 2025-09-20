@@ -10,12 +10,6 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 
 emailjs.init(EMAILJS_KEY)
 
-console.log('EmailJS Info:', {
-  EMAILJS_KEY,
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-})
-
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -85,6 +79,7 @@ export const Contact = () => {
           </h2>
         </div>
 
+        {/* Social links */}
         <div className='grid grid-cols-3 gap-10 mb-16'>
           {contactLinks.map((link, linkIndex) => {
             return (
