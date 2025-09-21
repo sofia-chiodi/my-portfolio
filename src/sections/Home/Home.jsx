@@ -1,6 +1,13 @@
 import { Code, Mail } from 'lucide-react'
 
 export const Home = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <section
@@ -31,14 +38,20 @@ export const Home = () => {
               </p>
 
               <div className='flex flex-col md:flex-row gap-4 mb-10'>
-                <button className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-2xl hover:shadow-pink-900/30 hover:scale-105 hover:text-fuchsia-50 '>
+                <button
+                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-2xl hover:shadow-pink-900/30 hover:scale-105 hover:text-fuchsia-50'
+                  onClick={() => scrollToSection('portfolio')}
+                >
                   <Code className='mr-2 group-hover:scale-110 transition-transform' />
-                  <a href='#projects'>My projects</a>
+                  My projects
                 </button>
 
-                <button className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-2xl hover:shadow-violet-900/30 hover:scale-105 '>
+                <button
+                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-2xl hover:shadow-violet-900/30 hover:scale-105'
+                  onClick={() => scrollToSection('contact')}
+                >
                   <Mail className='mr-2 group-hover:scale-110 transition-transform' />
-                  <a href='#projects'>Contact Me</a>
+                  Contact Me
                 </button>
               </div>
 
