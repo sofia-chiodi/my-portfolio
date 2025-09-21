@@ -37,9 +37,9 @@ const skillIcons = {
   SiFigma,
 }
 
-type CardTypes = { title: string; description: string; icon: string }
+type Skill = { title: string; description: string; icon: string }
 
-export const Card = ({ title, description, icon }: CardTypes) => {
+export const Card = ({ title, icon }: Skill) => {
   const SkillIcon = skillIcons[icon]
 
   return (
@@ -57,9 +57,6 @@ export const Card = ({ title, description, icon }: CardTypes) => {
           <h3 className='text-xl font-semibold text-violet-300 mb-4 relative z-10 leading-tight'>
             {title}
           </h3>
-          <p className='text-gray-600 leading-relaxed relative z-10'>
-            {description}
-          </p>
         </div>
       </div>
     </div>
