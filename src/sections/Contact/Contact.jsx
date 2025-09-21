@@ -1,14 +1,19 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { showToast } from '@/utils/toastConfig'
 import contactLinks from '@/utils/contactLinks'
 import { IoIosSend } from 'react-icons/io'
+import mapIcon from '@/utils/mapIcon'
 
 const EMAILJS_KEY = import.meta.env.VITE_EMAILJS_KEY
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 
 emailjs.init(EMAILJS_KEY)
+
+const mapPosition = { lat: -34.603325, lng: -58.381589 }
+const markerPosition = { lat: -34.6036942471056, lng: -58.38160579382771 }
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -187,6 +192,37 @@ export const Contact = () => {
               />
             </button>
           </form>
+        </div>
+
+        <div className='flex flex-col items-center gap-8'>
+          <div className=''>
+            <h3 className='text-xl font-semibold bg-gradient-to-r from-violet-300 to-blue-300 text-transparent bg-clip-text'>
+              Based in 📍 Buenos Aires, Argentina
+            </h3>
+          </div>
+
+          <MapContainer center={mapPosition} zoom={13} scrollWheelZoom={false}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            />
+            <Marker position={markerPosition} icon={mapIcon}>
+              <Popup>
+                <div className='flex flex-col items-center'>
+                  <p className='font-semibold bg-gradient-to-br from-pink-200 via-pink-300 to-amber-200 text-transparent bg-clip-text'>
+                    Ciudad Autónoma de Buenos Aires
+                  </p>
+                  <p>
+                    🇦🇷{' '}
+                    <span className='font-semibold bg-gradient-to-br from-indigo-300 via-blue-300/70 to-indigo-300 text-transparent bg-clip-text'>
+                      Argentina
+                    </span>{' '}
+                    🇦🇷
+                  </p>
+                </div>
+              </Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
     </section>
