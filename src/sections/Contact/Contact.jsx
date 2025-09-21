@@ -194,17 +194,21 @@ export const Contact = () => {
           </form>
         </div>
 
-        <div className='flex flex-col items-center gap-8'>
-          <div className=''>
-            <h3 className='text-xl font-semibold bg-gradient-to-r from-violet-300 to-blue-300 text-transparent bg-clip-text'>
-              Based in 📍 Buenos Aires, Argentina
-            </h3>
-          </div>
+        {/* Location Map */}
+        <div className='flex flex-col items-center'>
+          <h3 className='text-2xl font-semibold bg-gradient-to-r from-violet-300 to-blue-300 text-transparent bg-clip-text mt-2'>
+            Based in 📍 Buenos Aires, Argentina
+          </h3>
 
-          <MapContainer center={mapPosition} zoom={13} scrollWheelZoom={false}>
+          <MapContainer
+            center={mapPosition}
+            zoom={14}
+            scrollWheelZoom={false}
+            className='h-96 w-full rounded-2xl shadow-lg mt-6'
+          >
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+              attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
+              url='https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
             />
             <Marker position={markerPosition} icon={mapIcon}>
               <Popup>
