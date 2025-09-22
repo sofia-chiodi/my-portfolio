@@ -92,11 +92,13 @@ export const Contact = () => {
                 className='group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center'
                 key={linkIndex}
               >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${link.bgColor}`}
-                >
-                  <link.icon className='text-white' size={24} />
-                </div>
+                <a href={link.link} target='_blank' rel='noopener noreferrer'>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 ${link.bgColor}`}
+                  >
+                    <link.icon className='text-white' size={24} />
+                  </div>
+                </a>
                 <h3 className='text-lg font-bold text-gray-700 mb-2'>
                   {link.title}
                 </h3>
