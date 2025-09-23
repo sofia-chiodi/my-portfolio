@@ -1,4 +1,8 @@
-import { Code, Mail } from 'lucide-react'
+import { FaCode, FaArrowRight } from 'react-icons/fa6'
+import { IoIosPhonePortrait } from 'react-icons/io'
+import { IoBrowsersOutline } from 'react-icons/io5'
+
+import contactLinks from '@/utils/contactLinks'
 
 export const Home = () => {
   const scrollToSection = (sectionId) => {
@@ -23,13 +27,13 @@ export const Home = () => {
                   Hello! Sofía here.
                 </span>
               </div>
-              <h1 className='text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight'>
+              <h1 className='text-5xl md:text-6xl lg:text-7xl font-black text-white mb-10 leading-tight'>
                 Software{' '}
                 <span className='block text-transparent animate-pulse bg-clip-text bg-gradient-to-r from-violet-200 to-pink-300 drop-shadow-[0_0_6px_rgba(236,72,153,0.6)]'>
                   developer
                 </span>
               </h1>
-              <p className='text-lg text-white mb-8 leading-relaxed max-w-lg animate-fade-in-delay-3'>
+              <p className='text-lg text-white mb-10 leading-tight max-w-lg animate-fade-in-delay-1'>
                 Specialized in{' '}
                 <span className='text-pink-400/60 font-semibold'>
                   front-end{' '}
@@ -37,72 +41,70 @@ export const Home = () => {
                 technologies
               </p>
 
-              <div className='flex flex-col md:flex-row gap-4 mb-10'>
+              <div className='flex flex-col md:flex-row gap-4'>
                 <button
-                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-2xl hover:shadow-pink-900/30 hover:scale-105 hover:text-fuchsia-50'
+                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-xl hover:shadow-pink-950/20 hover:scale-105 hover:text-fuchsia-50'
                   onClick={() => scrollToSection('portfolio')}
                 >
-                  <Code className='mr-2 group-hover:scale-110 transition-transform' />
+                  <FaCode
+                    className='mr-2 group-hover:scale-110 transition-transform'
+                    size={20}
+                  />
                   My projects
                 </button>
 
                 <button
-                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-2xl hover:shadow-violet-900/30 hover:scale-105'
-                  onClick={() => scrollToSection('contact')}
+                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-xl hover:shadow-violet-950/20 hover:scale-105'
+                  onClick={() => scrollToSection('about')}
                 >
-                  <Mail className='mr-2 group-hover:scale-110 transition-transform' />
-                  Contact Me
+                  <FaArrowRight
+                    className='mr-2 group-hover:scale-110 transition-transform'
+                    size={20}
+                  />
+                  About me
                 </button>
-              </div>
-
-              {/* Stats */}
-
-              <div className='grid grid-cols-3 gap-4 font-bold lg:text-3xl text-2xl'>
-                <div className='text-center'>
-                  <div className=' text-white mb-1'>NN</div>
-                  <div className='text-gray-200 text-sm'>Projects</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-white mb-1'>NN</div>
-                  <div className='text-gray-200 text-sm'>Experience</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-white mb-1'>NN</div>
-                  <div className='text-gray-200 text-sm'>Stacks</div>
-                </div>
               </div>
             </div>
 
-            {/* Showcase projects*/}
-
+            {/* About */}
             <div className='relative'>
-              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl'>
-                <div className='space-y-6 max-w-3xl'>
-                  <div className='flex items-center space-x-4 p-4 bg-white/10 backdrop:blur-md rounded-2xl'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-orange-200 via-purple-200 to-purple-300 rounded-2xl flex items-center justify-center'>
-                      <span className='text-white font-semibold'>JS</span>
-                    </div>
-                    <div>
-                      <h3 className='text-white font-semibold'>
-                        Web development
-                        <p className='text-gray-100 text-sm'>
-                          Responsive interfaces
-                        </p>
-                      </h3>
-                    </div>
-                    <div className='ml-auto'>
-                      <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
-                    </div>
-                  </div>
+              {/* Links */}
+              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl p-4 mb-6'>
+                <h3 className='text-white text-center justify-center font-bold text-xl'>
+                  Let's work together!
+                </h3>
+                <div className='grid grid-cols-3 gap-2 font-bold lg:text-2xl text-xl p-4'>
+                  {contactLinks.map((link, linkIndex) => {
+                    return (
+                      <a
+                        href={link.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <div
+                          key={linkIndex}
+                          className={`mx-2 p-4 rounded-2xl font-semibold hover:scale-110 transition-all duration-300 shadow-lg text-white ${link.homeBgColor} inline-flex items-center justify-center`}
+                        >
+                          <link.icon size={24} />
+                        </div>
+                      </a>
+                    )
+                  })}
+                </div>
+              </div>
 
-                  <div className='flex items-center space-x-4 p-4 bg-white/10 backdrop:blur-md rounded-2xl'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-100 via-pink-200 to-pink-300 rounded-2xl flex items-center justify-center backdrop:blur-sm'>
-                      <span className='text-white font-semibold'>RJ</span>
+              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl p-6 border border-white/20 shadow-xl'>
+                <div className='space-y-full max-w-3xl'>
+                  <div className='flex items-center space-x-4 p-4 bg-white/20 backdrop:blur-md rounded-2xl mb-4'>
+                    <div className='w-10 h-10 bg-gradient-to-r from-orange-200 via-violet-200/70 to-violet-300/70 rounded-2xl flex items-center justify-center backdrop:blur-sm'>
+                      <span className='text-white font-semibold'>
+                        <IoIosPhonePortrait size={28} className='font-bold' />
+                      </span>
                     </div>
                     <div>
-                      <h3 className='text-white font-semibold'>
+                      <h3 className='text-violet-300/80 font-bold'>
                         Mobile Development
-                        <p className='text-gray-100 text-sm'>
+                        <p className='text-white text-sm'>
                           Modern applications
                         </p>
                       </h3>
@@ -112,15 +114,17 @@ export const Home = () => {
                     </div>
                   </div>
 
-                  <div className='flex items-center space-x-4 p-4 bg-white/10 backdrop:blur-md rounded-2xl'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-red-200 to-green-200 rounded-2xl flex items-center justify-center'>
-                      <span className='text-white font-semibold'>UX/UI</span>
+                  <div className='flex items-center space-x-4 p-4 bg-white/20 backdrop:blur-md rounded-2xl'>
+                    <div className='w-10 h-10 bg-gradient-to-r from-blue-200/70 via-pink-200/70 to-pink-300/70 rounded-2xl flex items-center justify-center'>
+                      <span className='text-white font-semibold'>
+                        <IoBrowsersOutline size={24} />
+                      </span>
                     </div>
                     <div>
-                      <h3 className='text-white font-semibold'>
-                        UX/UI Design
-                        <p className='text-gray-100 text-sm'>
-                          Interactive & intuitive interfaces
+                      <h3 className='text-pink-300/80 font-bold'>
+                        Web development
+                        <p className='text-white text-sm'>
+                          Responsive interfaces
                         </p>
                       </h3>
                     </div>
