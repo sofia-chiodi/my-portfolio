@@ -73,7 +73,7 @@ export const Home = () => {
                 <h3 className='text-white text-center justify-center font-bold text-xl'>
                   Let's work together!
                 </h3>
-                <div className='grid grid-cols-3 gap-2 font-bold lg:text-2xl text-xl p-4'>
+                <div className='grid grid-cols-3 gap-12 font-bold lg:text-2xl text-xl p-12'>
                   {contactLinks.map((link, linkIndex) => {
                     return (
                       <a
@@ -83,7 +83,7 @@ export const Home = () => {
                       >
                         <div
                           key={linkIndex}
-                          className={`mx-2 p-4 rounded-2xl font-semibold hover:scale-110 transition-all duration-300 shadow-lg text-white ${link.homeBgColor} inline-flex items-center justify-center`}
+                          className={`p-4 rounded-2xl font-semibold hover:scale-110 transition-all duration-300 shadow-lg text-white ${link.homeBgColor} inline-flex items-center justify-center`}
                         >
                           <link.icon size={24} />
                         </div>
