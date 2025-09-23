@@ -69,11 +69,11 @@ export const Home = () => {
             {/* About */}
             <div className='relative'>
               {/* Links */}
-              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl p-4 mb-6'>
-                <h3 className='text-white text-center justify-center font-bold text-xl'>
+              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl mb-6'>
+                <h3 className='text-white text-center justify-center font-bold text-xl mt-6'>
                   Let's work together!
                 </h3>
-                <div className='grid grid-cols-3 gap-12 font-bold lg:text-2xl text-xl p-12'>
+                <div className='grid grid-cols-3 gap-12 font-bold lg:text-2xl text-xl px-12 py-6'>
                   {contactLinks.map((link, linkIndex) => {
                     return (
                       <a
