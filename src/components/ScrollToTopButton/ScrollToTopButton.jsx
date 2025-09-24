@@ -31,7 +31,7 @@ export const ScrollToTopButton = () => {
     >
       <FaArrowUp
         size={20}
-        className='animate-button-bounce hover:scale-110 transition-all duration-200'
+        className='animate-button-bounce-y hover:scale-110 transition-all duration-200'
       />
     </button>
   )
