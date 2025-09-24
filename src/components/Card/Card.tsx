@@ -44,8 +44,8 @@ export const Card = ({ title, icon }: Skill) => {
 
   return (
     <div>
-      <div className='group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden h-50'>
-        <div className='absolute top-0 right-0 w-25 h-25 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 duration-500'></div>
+      <div className='group bg-white/80 p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden h-50 font-mono'>
+        <div className='absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-200 to-pink-200 -translate-y-10 translate-x-10 group-hover:scale-130 duration-300'></div>
         <div className='relative z-10 h-full flex flex-col'>
           <div
             className={`w-16 h-16 bg-gradient-to-r rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
@@ -54,7 +54,7 @@ export const Card = ({ title, icon }: Skill) => {
               <SkillIcon className='text-pink-200' size={45} />
             ) : null}
           </div>
-          <h3 className='text-xl font-semibold text-violet-300 mb-4 relative z-10 leading-tight'>
+          <h3 className='text-violet-300/80 mb-4 relative z-10 leading-tight font-semibold font-press-start-2p-sm'>
             {title}
           </h3>
         </div>

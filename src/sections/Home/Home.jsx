@@ -69,7 +69,7 @@ export const Home = () => {
             {/* About */}
             <div className='relative'>
               {/* Links */}
-              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl mb-6'>
+              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl mb-8'>
                 <h3 className='text-white text-center justify-center font-bold text-xl mt-6'>
                   Let's work together!
                 </h3>
@@ -78,15 +78,12 @@ export const Home = () => {
                     return (
                       <a
                         href={link.url}
+                        key={linkIndex}
                         target='_blank'
                         rel='noopener noreferrer'
+                        className={`p-4 rounded-2xl font-semibold hover:scale-110 transition-all duration-300 shadow-lg text-white ${link.homeBgColor} inline-flex items-center justify-center`}
                       >
-                        <div
-                          key={linkIndex}
-                          className={`p-4 rounded-2xl font-semibold hover:scale-110 transition-all duration-300 shadow-lg text-white ${link.homeBgColor} inline-flex items-center justify-center`}
-                        >
-                          <link.icon size={24} />
-                        </div>
+                        <link.icon size={24} />
                       </a>
                     )
                   })}
@@ -102,12 +99,12 @@ export const Home = () => {
                       </span>
                     </div>
                     <div>
-                      <h3 className='text-violet-300/80 font-bold'>
+                      <h4 className='text-violet-300/80 font-bold'>
                         Mobile Development
                         <p className='text-white text-sm'>
                           Modern applications
                         </p>
-                      </h3>
+                      </h4>
                     </div>
                     <div className='ml-auto'>
                       <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
@@ -121,12 +118,12 @@ export const Home = () => {
                       </span>
                     </div>
                     <div>
-                      <h3 className='text-pink-300/80 font-bold'>
+                      <h4 className='text-pink-300/80 font-bold'>
                         Web development
                         <p className='text-white text-sm'>
                           Responsive interfaces
                         </p>
-                      </h3>
+                      </h4>
                     </div>
                     <div className='ml-auto'>
                       <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
