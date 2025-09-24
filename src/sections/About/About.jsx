@@ -1,7 +1,20 @@
+import { useState, useEffect } from 'react'
+
 import { Card } from '@/components/Card/Card'
 import skillsList from '../../utils/skillsList'
+import { ArrowRightIcon, HeartIcon } from 'raster-react'
 
 export const About = () => {
+  const [showSkillsButton, setShowSkillsButton] = useState(false)
+
+  useEffect(() => {
+    const buttonTimer = setTimeout(() => {
+      setShowSkillsButton(true)
+    }, 14500)
+
+    return () => clearTimeout(buttonTimer)
+  }, [])
+
   return (
     <section
       id='about'
@@ -16,47 +29,73 @@ export const About = () => {
           <div className='text-center mb-16'>
             <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 text-4xl rounded-full font-bold'>
               <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300'>
-                <h2 className='leading-tight'>🌸 About Me 🌸</h2>
+                <h2 className='leading-tight flex items-center gap-1'>
+                  <HeartIcon size={40} strokeWidth={5} color='#F9A8D4' />
+                  About Me{' '}
+                  <HeartIcon
+                    size={40}
+                    strokeWidth={5}
+                    color='#F9A8D4'
+                    className='ml-1'
+                  />
+                </h2>
               </span>
             </div>
           </div>
 
           {/* Description */}
-          <div className='retro-window mx-auto max-w-5xl mb-16 border border-pink-300/60 shadow-xl'>
-            <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 text-md font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
-              <h3 className='font-bold'>about_me.exe</h3>
-              <button className='text-pink-400/70 hover:scale-105 hover:text-violet-400/70 transition-colors'>
-                X
-              </button>
-            </div>
-            <div className='window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm text-base'>
-              <p className='m-8'>
-                I'm a{' '}
-                <span className='font-bold text-pink-400/40'>front-end</span>{' '}
-                developer from{' '}
-                <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
-                  Buenos Aires, Argentina
-                </span>{' '}
-                who loves creating innovative and intuitive experiences for
-                users.
-              </p>{' '}
-              <p className='m-8'>
-                I've created this portfolio as a fun way to showcase some of my
-                projects and skills, regadring this main tech stack:
-              </p>
-              {/* Stack */}
-              <div className='m-8'>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 lg:gap-8'>
-                  {skillsList.map((skill, skillIndex) => (
-                    <Card
-                      key={skillIndex}
-                      title={skill.title}
-                      icon={skill.icon}
-                    />
-                  ))}
+          <div className='max-w-3xl mx-auto mb-16'>
+            <div className='flex justify-center'>
+              <div className='retro-window border border-pink-300/60 shadow-xl'>
+                <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 text-md font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
+                  <h3 className='font-bold'>about_me.exe</h3>
+                  <button className='text-pink-400/70 hover:scale-105 hover:text-violet-400/70 transition-colors'>
+                    X
+                  </button>
+                </div>
+                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm'>
+                  <p className='typewriter animate-typing-1'>
+                    I'm a{' '}
+                    <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
+                      front-end
+                    </span>{' '}
+                    developer from{' '}
+                    <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
+                      Buenos Aires, Argentina.
+                    </span>{' '}
+                  </p>
+                  <p className='typewriter animate-typing-2'>
+                    My goal is creating innovative & intuitive experiences.
+                  </p>
+
+                  <p className='mt-6 typewriter animate-typing-3'>
+                    I've created this portfolio as a fun way to showcase{' '}
+                  </p>
+                  <p className='typewriter animate-typing-4'>
+                    some of my skills and projects I've worked in.
+                  </p>
+
+                  <button
+                    className={`flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 animate-button-bounce-x duration-200 transition-all ${
+                      showSkillsButton
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-4 pointer-events-none'
+                    }`}
+                  >
+                    <ArrowRightIcon size={50} strokeWidth={5} radius={1} />
+                    <p> Press to show skills</p>
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Stack */}
+        <div className='max-w-5xl mx-auto m-8'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 lg:gap-8'>
+            {skillsList.map((skill, skillIndex) => (
+              <Card key={skillIndex} title={skill.title} icon={skill.icon} />
+            ))}
           </div>
         </div>
       </div>

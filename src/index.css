@@ -7,6 +7,8 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
+/* FONTS */
+
 .font-press-start-2p-lg {
   font-family: 'Press Start 2P', system-ui;
   font-weight: 100;
@@ -59,6 +61,35 @@ body {
   }
 }
 
+/* Typewriter */
+@keyframes typing {
+  from {
+    width: 0%;
+    opacity: 1;
+    border-right-color: #f9a8d4;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+    border-right-color: #f9a8d4;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing-end {
+  from {
+    border-right-color: #f9a8d4;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 /* ANIMATIONS */
 
 /* Fade in */
@@ -85,4 +116,51 @@ body {
 
 .animate-button-bounce-x {
   animation: bounce-x 1s infinite;
+}
+
+/* Typewriter */
+.typewriter {
+  overflow: hidden;
+  border-right: 4px solid transparent;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0;
+}
+
+.stop-cursor {
+  border-right: none !important;
+}
+
+.animate-typing-1 {
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end 4,
+    typing-end 0s forwards;
+  animation-delay: 0s, 0s, 3s;
+}
+.animate-typing-2 {
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end 4,
+    typing-end 0s forwards;
+  animation-delay: 3.5s, 3.5s, 6.5s;
+}
+.animate-typing-3 {
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end 4,
+    typing-end 0s forwards;
+  animation-delay: 7s, 7s, 10s;
+}
+.animate-typing-4 {
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end 4,
+    typing-end 0s forwards;
+  animation-delay: 10s, 10s, 13s;
+}
+.animate-typing-5 {
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end 4,
+    typing-end 0s forwards;
+  animation-delay: 13s, 13s, 16s;
+}
+
+.animate-typing-1,
+.animate-typing-2,
+.animate-typing-3,
+.animate-typing-4,
+.animate-typing-5 {
+  width: 0;
 }
