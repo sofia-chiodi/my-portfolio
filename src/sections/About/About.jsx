@@ -7,6 +7,12 @@ import { ArrowRightIcon, HeartIcon } from 'raster-react'
 export const About = () => {
   const [showSkillsButton, setShowSkillsButton] = useState(false)
 
+  const [showSkills, setShowSkills] = useState(false)
+
+  const handleShowSkills = () => {
+    setShowSkills((prev) => !prev)
+  }
+
   useEffect(() => {
     const buttonTimer = setTimeout(() => {
       setShowSkillsButton(true)
@@ -69,10 +75,10 @@ export const About = () => {
                   </p>
 
                   <p className='mt-6 typewriter animate-typing-3'>
-                    I've created this portfolio as a fun way to showcase{' '}
+                    I've developed this portfolio as a fun way to showcase{' '}
                   </p>
                   <p className='typewriter animate-typing-4'>
-                    some of my skills and projects I've worked in.
+                    some of my skills and projects that I've worked on.
                   </p>
 
                   <button
@@ -81,9 +87,14 @@ export const About = () => {
                         ? 'opacity-100 translate-y-0'
                         : 'opacity-0 translate-y-4 pointer-events-none'
                     }`}
+                    onClick={handleShowSkills}
                   >
                     <ArrowRightIcon size={50} strokeWidth={5} radius={1} />
-                    <p> Press to show skills</p>
+                    {showSkills ? (
+                      <p>Press to hide stack</p>
+                    ) : (
+                      <p>Press to show stack</p>
+                    )}
                   </button>
                 </div>
               </div>
@@ -91,13 +102,15 @@ export const About = () => {
           </div>
         </div>
         {/* Stack */}
-        <div className='max-w-5xl mx-auto m-8'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 lg:gap-8'>
-            {skillsList.map((skill, skillIndex) => (
-              <Card key={skillIndex} title={skill.title} icon={skill.icon} />
-            ))}
+        {showSkills ? (
+          <div className='max-w-5xl mx-auto m-8'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 lg:gap-8'>
+              {skillsList.map((skill, skillIndex) => (
+                <Card key={skillIndex} title={skill.title} icon={skill.icon} />
+              ))}
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   )
