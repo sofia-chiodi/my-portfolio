@@ -1,39 +1,19 @@
-import { useState, useEffect } from 'react'
-
-import { Card } from '@/components/Card/Card'
-import skillsList from '../../utils/skillsList'
 import { ArrowRightIcon, HeartIcon } from 'raster-react'
 
 export const About = () => {
-  const [showSkillsButton, setShowSkillsButton] = useState(false)
-
-  const [showSkills, setShowSkills] = useState(false)
-
-  const handleShowSkills = () => {
-    setShowSkills((prev) => !prev)
-  }
-
-  useEffect(() => {
-    const buttonTimer = setTimeout(() => {
-      setShowSkillsButton(true)
-    }, 14500)
-
-    return () => clearTimeout(buttonTimer)
-  }, [])
-
   return (
     <section
       id='about'
       className='bg-[url("/images/bkg-retro-gaming.png")] bg-no-repeat bg-cover bg-center'
     >
-      <div className='min-h-screen py-32 relative overflow-hidden'>
+      <div className='min-h-screen py-32 relative overflow-hidden bg-pink-50/20'>
         <div className='absolute inset-0 opacity-25'>
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-300 via-pink-300 to-pink-600 transform rotate-12 scale-150'></div>
         </div>
 
         <div className='max-w-7xl mx-auto py-4 px-8 md:px-6 lg:px-10 relative z-10'>
           <div className='text-center mb-16'>
-            <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 text-4xl rounded-full font-bold'>
+            <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 text-4xl rounded-full font-bold shadow-xl shadow-pink-900/20'>
               <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300'>
                 <h2 className='leading-tight flex items-center gap-1'>
                   <HeartIcon size={40} strokeWidth={5} color='#F9A8D4' />
@@ -50,16 +30,16 @@ export const About = () => {
           </div>
 
           {/* Description */}
-          <div className='max-w-3xl mx-auto mb-16'>
+          <div className='max-w-5xl mx-auto mb-16'>
             <div className='flex justify-center'>
-              <div className='retro-window border border-pink-300/60 shadow-xl'>
+              <div className='retro-window border-2 border-pink-300/60 shadow-xl shadow-pink-900/30'>
                 <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 text-md font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
                   <h3 className='font-bold'>about_me.exe</h3>
                   <button className='text-pink-400/70 hover:scale-105 hover:text-violet-400/70 transition-colors'>
                     X
                   </button>
                 </div>
-                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm'>
+                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm gap-2'>
                   <p className='typewriter animate-typing-1'>
                     I'm a{' '}
                     <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
@@ -74,43 +54,21 @@ export const About = () => {
                     My goal is creating innovative & intuitive experiences.
                   </p>
 
-                  <p className='mt-6 typewriter animate-typing-3'>
+                  <p className='mt-10 typewriter animate-typing-3'>
                     I've developed this portfolio as a fun way to showcase{' '}
                   </p>
                   <p className='typewriter animate-typing-4'>
                     some of my skills and projects that I've worked on.
                   </p>
 
-                  <button
-                    className={`flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 animate-button-bounce-x duration-200 transition-all ${
-                      showSkillsButton
-                        ? 'opacity-100 translate-y-0'
-                        : 'opacity-0 translate-y-4 pointer-events-none'
-                    }`}
-                    onClick={handleShowSkills}
-                  >
+                  <button className='flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 animate-button-bounce-x duration-200 transition-all'>
                     <ArrowRightIcon size={50} strokeWidth={5} radius={1} />
-                    {showSkills ? (
-                      <p>Press to hide stack</p>
-                    ) : (
-                      <p>Press to show stack</p>
-                    )}
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Stack */}
-        {showSkills ? (
-          <div className='max-w-5xl mx-auto m-8'>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 lg:gap-8'>
-              {skillsList.map((skill, skillIndex) => (
-                <Card key={skillIndex} title={skill.title} icon={skill.icon} />
-              ))}
-            </div>
-          </div>
-        ) : null}
       </div>
     </section>
   )
