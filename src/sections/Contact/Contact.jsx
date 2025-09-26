@@ -68,14 +68,14 @@ export const Contact = () => {
       <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-pink-200 to-violet-200 rounded-full filter blur-xl opacity-60 translate-y-48'></div>
 
       <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
-        <div className='text-center mb-16'>
-          <div className='inline-flex px-8 py-4 bg-gradient-to-r from-pink-200 to-purple-200 text-4xl rounded-full mb-8 font-bold'>
+        <div className='text-center'>
+          <div className='inline-flex px-8 py-4 bg-gradient-to-r from-pink-200 to-purple-200 text-4xl rounded-full mb-16 font-bold'>
             <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-violet-300'>
               <h2>✨ Contact me ✨</h2>
             </span>
           </div>
 
-          <h2 className='mt-8 text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-6 leading-tight'>
+          <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-16 leading-tight'>
             Check out my{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-pink-300 to-violet-300'>
               social links{' '}
