@@ -3,6 +3,7 @@ import { Home } from '@/sections/Home/Home.jsx'
 import { About } from '@/sections/About/About.jsx'
 import { Portfolio } from '@/sections/Portfolio/Portfolio.jsx'
 import { Contact } from '@/sections/Contact/Contact.jsx'
+import { Skills } from '@/sections/Skills/Skills.jsx'
 import { Footer } from '@/components/Footer/Footer.jsx'
 import { ScrollToTopButton } from '@/components/ScrollToTopButton/ScrollToTopButton.jsx'
 import 'leaflet/dist/leaflet.css'
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Home />
       <About />
+      <Skills />
       <Portfolio />
       <Contact />
       <Toast />
