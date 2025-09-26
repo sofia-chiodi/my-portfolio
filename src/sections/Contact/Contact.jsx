@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { showToast } from '@/utils/toastConfig'
 import contactLinks from '@/utils/contactLinks'
+import { SectionTitle } from '@/components/SectionTitle/SectionTitle'
 import { IoIosSend } from 'react-icons/io'
 import mapIcon from '@/utils/mapIcon'
 
@@ -69,11 +70,7 @@ export const Contact = () => {
 
       <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
         <div className='text-center'>
-          <div className='inline-flex px-8 py-4 bg-gradient-to-r from-pink-200 to-purple-200 text-4xl rounded-full mb-16 font-bold'>
-            <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-violet-300'>
-              <h2>✨ Contact me ✨</h2>
-            </span>
-          </div>
+          <SectionTitle>✨ Contact me ✨</SectionTitle>
 
           <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-16 leading-tight'>
             Check out my{' '}

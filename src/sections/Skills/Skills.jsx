@@ -1,5 +1,6 @@
 import { Card } from '@/components/Card/Card'
 import skillsList from '../../utils/skillsList'
+import { SectionTitle } from '@/components/SectionTitle/SectionTitle'
 
 export const Skills = () => {
   const scrollToSection = (sectionId) => {
@@ -18,11 +19,7 @@ export const Skills = () => {
 
         <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
           <div className='text-center'>
-            <div className='inline-flex px-8 py-4 bg-gradient-to-r from-pink-200 to-purple-200 text-4xl rounded-full mb-16 font-bold'>
-              <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-violet-300'>
-                <h2>✨ Skills ✨</h2>
-              </span>
-            </div>
+            <SectionTitle>✨ Skills ✨</SectionTitle>
 
             <h2 className='mb-16 text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 leading-tight'>
               These are the{' '}
