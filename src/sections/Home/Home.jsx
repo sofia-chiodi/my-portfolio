@@ -43,7 +43,7 @@ export const Home = () => {
 
               <div className='flex flex-col md:flex-row gap-4'>
                 <button
-                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-xl hover:shadow-pink-950/20 hover:scale-105 hover:text-fuchsia-50'
+                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-xl hover:shadow-pink-950/20 hover:scale-105 hover:text-fuchsia-50 cursor-pointer'
                   onClick={() => scrollToSection('portfolio')}
                 >
                   <FaCode
@@ -54,7 +54,7 @@ export const Home = () => {
                 </button>
 
                 <button
-                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-xl hover:shadow-violet-950/20 hover:scale-105'
+                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-xl hover:shadow-violet-950/20 hover:scale-105 cursor-pointer'
                   onClick={() => scrollToSection('about')}
                 >
                   <FaArrowRight
