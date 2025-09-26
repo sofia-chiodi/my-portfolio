@@ -37,7 +37,7 @@ const skillIcons = {
   SiFigma,
 }
 
-type Skill = { title: string; description: string; icon: string }
+type Skill = { title: string; icon: string }
 
 export const Card = ({ title, icon }: Skill) => {
   const SkillIcon = skillIcons[icon]

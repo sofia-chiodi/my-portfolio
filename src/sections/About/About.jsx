@@ -1,9 +1,16 @@
 import { ArrowRightIcon, HeartIcon } from 'raster-react'
+import { useInView } from 'react-intersection-observer'
 
 export const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  })
+
   return (
     <section
       id='about'
+      ref={ref}
       className='bg-[url("/images/bkg-retro-gaming.png")] bg-no-repeat bg-cover bg-center'
     >
       <div className='min-h-screen py-32 relative overflow-hidden bg-pink-50/20'>
@@ -40,7 +47,9 @@ export const About = () => {
                   </button>
                 </div>
                 <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm gap-2'>
-                  <p className='typewriter animate-typing-1'>
+                  <p
+                    className={`typewriter ${inView ? 'animate-typing-1' : ''}`}
+                  >
                     I'm a{' '}
                     <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
                       front-end
@@ -50,14 +59,22 @@ export const About = () => {
                       Buenos Aires, Argentina.
                     </span>{' '}
                   </p>
-                  <p className='typewriter animate-typing-2'>
+                  <p
+                    className={`typewriter ${inView ? 'animate-typing-2' : ''}`}
+                  >
                     My goal is creating innovative & intuitive experiences.
                   </p>
 
-                  <p className='mt-10 typewriter animate-typing-3'>
+                  <p
+                    className={`mt-10 typewriter ${
+                      inView ? 'animate-typing-3' : ''
+                    }`}
+                  >
                     I've developed this portfolio as a fun way to showcase{' '}
                   </p>
-                  <p className='typewriter animate-typing-4'>
+                  <p
+                    className={`typewriter ${inView ? 'animate-typing-4' : ''}`}
+                  >
                     some of my skills and projects that I've worked on.
                   </p>
 
