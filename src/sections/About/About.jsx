@@ -78,9 +78,13 @@ export const About = () => {
                     some of my skills and projects that I've worked on.
                   </p>
 
-                  <button className='flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 animate-button-bounce-x duration-200 transition-all'>
+                  <a
+                    href='#portfolio'
+                    className='flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 duration-200 transition-all animate-fade-in-button'
+                  >
                     <ArrowRightIcon size={50} strokeWidth={5} radius={1} />
-                  </button>
+                    View projects
+                  </a>
                 </div>
               </div>
             </div>

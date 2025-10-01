@@ -7,6 +7,10 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* FONTS */
 
 .font-press-start-2p-lg {
@@ -31,6 +35,17 @@ body {
     transform: translateY(20px);
   }
   100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -109,13 +124,14 @@ body {
   animation: fadeInDelay 3s ease-in-out forwards;
 }
 
+.animate-fade-in-button {
+  opacity: 0;
+  animation: fadeInButton 1s ease forwards 15s, bounce-x 1s infinite 15.5s;
+}
+
 /* Bounce */
 .animate-button-bounce-y {
   animation: bounce-y 0.9s infinite;
-}
-
-.animate-button-bounce-x {
-  animation: bounce-x 1s infinite;
 }
 
 /* Typewriter */
