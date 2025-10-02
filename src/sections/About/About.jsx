@@ -1,90 +1,121 @@
-import { ArrowRightIcon, HeartIcon } from 'raster-react'
-import { useInView } from 'react-intersection-observer'
+import { Card } from '@/components/Card/Card'
+import skillsList from '../../utils/skillsList'
+import { SectionTitle } from '@/components/SectionTitle/SectionTitle'
+import { FaArrowDown } from 'react-icons/fa'
 
 export const About = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  })
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
-    <section
-      id='about'
-      ref={ref}
-      className='bg-[url("/images/bkg-retro-gaming.png")] bg-no-repeat bg-cover bg-center'
-    >
-      <div className='min-h-screen py-32 relative overflow-hidden bg-pink-50/20'>
-        <div className='absolute inset-0 opacity-25'>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-300 via-pink-300 to-pink-600 transform rotate-12 scale-150'></div>
+    <section id='about'>
+      <div className='min-h-screen py-32 relative overflow-hidden'>
+        <div className='absolute inset-0 opacity-30'>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-fuchsia-700 via-pink-400/80 to-violet-300 transform scale-150'></div>
         </div>
 
-        <div className='max-w-7xl mx-auto px-6 lg:px-10 relative z-10'>
-          <div className='text-center mb-16'>
-            <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 text-4xl rounded-full font-bold shadow-xl shadow-pink-900/20'>
-              <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300'>
-                <h2 className='leading-tight flex items-center gap-1'>
-                  <HeartIcon size={40} strokeWidth={5} color='#F9A8D4' />
-                  About Me{' '}
-                  <HeartIcon
-                    size={40}
-                    strokeWidth={5}
-                    color='#F9A8D4'
-                    className='ml-1'
-                  />
-                </h2>
-              </span>
-            </div>
-          </div>
+        <div className='max-w-7xl mx-auto py-4 px-6 md:px-12 lg:px-10 relative z-10'>
+          <div className='text-center'>
+            <SectionTitle>✨ About me ✨</SectionTitle>
 
-          {/* Description */}
-          <div className='max-w-5xl mx-auto'>
-            <div className='flex justify-center'>
-              <div className='retro-window border-2 border-pink-300/60 shadow-xl shadow-pink-900/30'>
-                <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
-                  <h3 className='font-bold'>about_me.exe</h3>
-                  <button className='text-pink-400/70 hover:scale-105 font-bold hover:text-violet-400/70 transition-colors'>
-                    X
-                  </button>
-                </div>
-                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-4 md:p-6 font-press-start-2p-sm gap-2'>
-                  <p
-                    className={`typewriter ${inView ? 'animate-typing-1' : ''}`}
-                  >
+            <div className='max-w-3xl mx-auto mb-16 space-y-6'>
+              <div className='flex justify-start pr-12 animate-fade-in-delay-1'>
+                <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-violet-300/20 backdrop-blur-md shadow-md text-left'>
+                  <p className='text-white text-lg md:text-xl leading-relaxed'>
                     I'm a{' '}
-                    <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
-                      front-end
+                    <span className='font-semibold bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent'>
+                      front-end developer
                     </span>{' '}
-                    developer from{' '}
-                    <span className='bg-pink-400/40 text-transparent bg-clip-text font-bold'>
-                      Buenos Aires, Argentina.
+                    from{' '}
+                    <span className='bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent font-semibold'>
+                      📍 Buenos Aires, Argentina
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div className='flex justify-end pl-12 animate-fade-in-delay-2'>
+                <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-pink-300/30 backdrop-blur-md shadow-md text-left'>
+                  <p className='text-white text-lg md:text-xl leading-relaxed'>
+                    I love creating{' '}
+                    <span className='font-semibold bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent'>
+                      innovative & intuitive experiences
+                    </span>{' '}
+                    for users{' '}
+                    <span className='font-bold bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent'>
+                      ✨
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div className='flex justify-start pr-12 animate-fade-in-delay-3'>
+                <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-violet-300/20 backdrop-blur-md shadow-md text-left'>
+                  <p className='text-white text-lg md:text-xl leading-relaxed'>
+                    This{' '}
+                    <span className='font-semibold text-violet-300/70'>
+                      portfolio
+                    </span>{' '}
+                    is a fun way to showcase some of the{' '}
+                    <span className='font-semibold text-pink-300/70'>
+                      projects
+                    </span>{' '}
+                    I’ve worked on
+                  </p>
+                </div>
+              </div>
+
+              <div className='flex justify-end pl-12 animate-fade-in-delay-4'>
+                <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-pink-300/30 backdrop-blur-md shadow-md text-left'>
+                  <p className='text-white text-lg md:text-xl leading-relaxed'>
+                    Check out below my most used{' '}
+                    <span className='font-semibold bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent'>
+                      tech stacks!
                     </span>{' '}
                   </p>
-                  <p
-                    className={`typewriter ${inView ? 'animate-typing-2' : ''}`}
-                  >
-                    My goal is creating innovative & intuitive experiences.
-                  </p>
+                </div>
+              </div>
 
-                  <p
-                    className={`mt-10 typewriter ${
-                      inView ? 'animate-typing-3' : ''
-                    }`}
-                  >
-                    I've developed this portfolio as a fun way to showcase{' '}
-                  </p>
-                  <p
-                    className={`typewriter ${inView ? 'animate-typing-4' : ''}`}
-                  >
-                    some of my skills and projects that I've worked on.
-                  </p>
+              <button
+                className='right-6 z-50 bg-gradient-to-r from-violet-300 to-pink-300 
+                      rounded-full p-2 hover:scale-110 transition-all duration-300 text-white/80 
+                      border border-white/80 shadow-lg'
+              >
+                <FaArrowDown
+                  size={20}
+                  className='animate-button-bounce-y hover:scale-110 transition-all duration-200'
+                />
+              </button>
+            </div>
 
-                  <a
-                    href='#portfolio'
-                    className='flex flex-row-reverse items-center gap-2 bottom-0 right-0 hover:scale-102 text-pink-400/70 rounded-full hover:text-violet-400/70 mt-4 duration-200 transition-all animate-fade-in-button'
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+              {skillsList.map((skill) => (
+                <Card
+                  key={skill.id}
+                  title={skill.title}
+                  description={skill.description}
+                  icon={skill.icon}
+                />
+              ))}
+            </div>
+
+            <div className='text-center mt-20'>
+              <div className='bg-gradient-to-r from-violet-300/80 to-pink-300/80 rounded-3xl p-6 md:p-10 relative overflow-hidden'>
+                <div className='absolute inset-0 bg-black/10'></div>
+                <div className='relative z-10'>
+                  <h3 className='text-2xl md:text-3xl font-bold mb-4 text-white'>
+                    Check out my projects!
+                  </h3>
+                  <button
+                    className='bg-gradient-to-r from-pink-300 to-violet-300 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-xl'
+                    onClick={() => scrollToSection('portfolio')}
                   >
-                    <ArrowRightIcon size={50} strokeWidth={5} radius={1} />
-                    View projects
-                  </a>
+                    Portfolio
+                  </button>
                 </div>
               </div>
             </div>
