@@ -1,6 +1,8 @@
 import { FaCode, FaArrowRight } from 'react-icons/fa6'
 import { IoIosPhonePortrait } from 'react-icons/io'
 import { IoBrowsersOutline } from 'react-icons/io5'
+import { HomeButton } from '@/components/HomeButton/HomeButton.jsx'
+import { TextContainer } from '../../components/TextContainer/TextContainer'
 
 import contactLinks from '@/utils/contactLinks'
 
@@ -16,22 +18,24 @@ export const Home = () => {
     <>
       <section
         id='home'
-        className='min-h-screen py-24 sm:py-32 flex items-center relative overflow-hidden bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
+        className='min-h-screen py-32 flex items-center relative bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
       >
-        <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10'>
+        <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-center md:text-left'>
           <div className='md:grid md:grid-cols-2 md:gap-20 lg:gap-35 items-center'>
-            <div className='mb-12 lg:mb-0'>
-              <div className='inline-flex items-center px-4 py-2 bg-black/5 backdrop-blur-sm rounded-full border border-white/15 mb-6'>
+            <div className='mb-8 lg:mb-0'>
+              <div className='inline-flex items-center px-4 py-2 bg-black/5 backdrop-blur-sm rounded-full border border-white/15 mb-8'>
                 <span className='w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse'></span>
-                <span className='text-white text-md'>Hello! Sofía here.</span>
+                <span className='text-white text-lg font-large'>
+                  Hello! Sofía here.
+                </span>
               </div>
-              <h1 className='text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-6 lg:mb-10 leading-tight'>
+              <h1 className='text-6xl lg:text-7xl font-black text-white mb-8 md:mb-10 leading-tight'>
                 Software{' '}
                 <span className='block text-transparent animate-pulse bg-clip-text bg-gradient-to-r from-violet-200 to-pink-300 drop-shadow-[0_0_6px_rgba(236,72,153,0.6)]'>
                   developer
                 </span>
               </h1>
-              <p className='text-lg text-white mb-10 leading-tight max-w-lg animate-fade-in-delay-1'>
+              <p className='text-md md:text-lg text-white mb-8 md:mb-10 leading-tight max-w-lg animate-fade-in-delay-1'>
                 Specialized in{' '}
                 <span className='text-pink-400/60 font-semibold'>
                   front-end{' '}
@@ -39,9 +43,9 @@ export const Home = () => {
                 technologies
               </p>
 
-              <div className='px-6 py-4 lg:px-0 lg:py-0 flex flex-col md:flex-row gap-4'>
-                <button
-                  className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-xl hover:shadow-pink-950/20 hover:scale-105 hover:text-fuchsia-50 cursor-pointer'
+              <div className='flex flex-row gap-4 justify-center sm:justify-start'>
+                <HomeButton
+                  className='bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 hover:shadow-pink-950/20 hover:text-fuchsia-50'
                   onClick={() => scrollToSection('portfolio')}
                 >
                   <FaCode
@@ -49,10 +53,10 @@ export const Home = () => {
                     size={20}
                   />
                   My projects
-                </button>
+                </HomeButton>
 
-                <button
-                  className='group border border-white/30 text-white hover:bg-white/40 hover:text-violet-300 sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-xl hover:shadow-violet-950/20 hover:scale-105 cursor-pointer'
+                <HomeButton
+                  className='border border-white/30 hover:bg-white/40 hover:text-violet-300 hover:shadow-violet-950/20'
                   onClick={() => scrollToSection('about')}
                 >
                   <FaArrowRight
@@ -60,18 +64,16 @@ export const Home = () => {
                     size={20}
                   />
                   About me
-                </button>
+                </HomeButton>
               </div>
             </div>
 
-            {/* About */}
             <div className='relative'>
-              {/* Links */}
-              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl border border-white/20 shadow-xl mb-8'>
-                <h3 className='text-white text-center justify-center font-bold text-xl mt-6'>
+              <TextContainer className='mt-12'>
+                <h3 className='text-white text-center justify-center font-bold text-xl mb-6'>
                   Let's work together!
                 </h3>
-                <div className='grid grid-cols-3 gap-12 font-bold lg:text-2xl text-xl px-12 py-6'>
+                <div className='grid grid-cols-3 gap-12 font-bold lg:text-2xl text-xl px-6'>
                   {contactLinks.map((link, linkIndex) => {
                     return (
                       <a
@@ -86,9 +88,9 @@ export const Home = () => {
                     )
                   })}
                 </div>
-              </div>
+              </TextContainer>
 
-              <div className='relative bg-white/10 backdrop:blur-xl rounded-3xl p-6 border border-white/20 shadow-xl'>
+              <TextContainer className='p-6'>
                 <div className='space-y-full max-w-3xl'>
                   <div className='flex items-center space-x-4 p-4 bg-white/20 backdrop:blur-md rounded-2xl mb-4'>
                     <div className='w-10 h-10 bg-gradient-to-r from-orange-200 via-violet-200/70 to-violet-300/70 rounded-2xl flex items-center justify-center backdrop:blur-sm'>
@@ -128,7 +130,7 @@ export const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </TextContainer>
             </div>
           </div>
         </div>
