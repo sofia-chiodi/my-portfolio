@@ -70,7 +70,7 @@ export const Contact = () => {
 
       <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
         <div className='text-center'>
-          <SectionTitle>✨ Contact me ✨</SectionTitle>
+          <SectionTitle>✨ Contact ✨</SectionTitle>
 
           <h2 className='text-lg md:text-2xl lg:text-3xl font-bold text-violet-300 mb-16 leading-tight'>
             Check out my{' '}

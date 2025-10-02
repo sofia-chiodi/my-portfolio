@@ -4,7 +4,7 @@ const projectsList = [
     title: 'E-Beer',
     description:
       'Responsive full-stack website for an e-commerce, that integrates both frontend and backend',
-    category: ['web', 'ecommerce'],
+    category: ['web'],
     image: 'images/e-beer.png',
     stack: [
       'JavaScript',

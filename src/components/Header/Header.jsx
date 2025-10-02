@@ -40,8 +40,8 @@ export const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center py-4'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-4'>
+        <div className='flex justify-between items-center'>
           <Logo isScrolled={isScrolled} />
           <Navbar
             isScrolled={isScrolled}
@@ -55,9 +55,9 @@ export const Header = () => {
             onClick={toggleResponsiveMenu}
           >
             {isResponsiveMenuOpen ? (
-              <X size={30} strokeWidth={2.3} />
+              <X size={20} strokeWidth={2.3} />
             ) : (
-              <Menu size={30} strokeWidth={2.3} />
+              <Menu size={20} strokeWidth={2.3} />
             )}
           </button>
         </div>

@@ -21,11 +21,11 @@ export const Portfolio = () => {
       <div className='absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-violet-200 to-transparent rounded-full translate-x-48'></div>
       <div className='absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-l from-pink-200 to-transparent rounded-full translate-y-48'></div>
 
-      <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 relative z-10'>
+      <div className='max-w-7xl mx-auto py-2 md:py-4 lg:py-6 px-4 md:px-6 lg:px-10 relative z-10'>
         <div className='text-center'>
           <SectionTitle>✨ Portfolio ✨</SectionTitle>
 
-          <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-16 leading-tight'>
+          <h2 className='text-lg md:text-2xl lg:text-3xl font-bold text-violet-300 mb-6 lg:mb-12 leading-tight'>
             Here are some of the{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-pink-300 to-violet-300'>
               projects{' '}
@@ -35,13 +35,13 @@ export const Portfolio = () => {
         </div>
 
         {/* Filter */}
-        <div className='flex flex-wrap justify-center gap-4 mb-12'>
+        <div className='flex flex-wrap justify-center gap-2 md:gap-4 mb-4 md:mb-6 lg:mb-12'>
           {projectFilters.map((filter) => {
             return (
               <button
                 onClick={() => setActiveFilter(filter.id)}
                 key={filter.id}
-                className={`px-6 py-3 rounded-3xl font-semibold transition-all duration-100 ${
+                className={`px-2 md:px-6 py-2 md:py-3 rounded-3xl text-xs md:text-sm lg:text-base font-semibold transition-all duration-100 ${
                   activeFilter === filter.id
                     ? 'bg-gradient-to-r from-violet-200 to-pink-200 text-white shadow-lg scale-105'
                     : 'bg-transparent text-gray-400 hover:bg-pink-50 border border-gray-200 hover:border-pink-100'
@@ -54,7 +54,7 @@ export const Portfolio = () => {
         </div>
 
         {/* Projects */}
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredProjects.map((project, projectIndex) => {
             return (
               <div

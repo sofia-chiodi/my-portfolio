@@ -16,18 +16,16 @@ export const Home = () => {
     <>
       <section
         id='home'
-        className='min-h-screen py-32 flex items-center relative overflow-hidden bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
+        className='min-h-screen py-24 sm:py-32 flex items-center relative overflow-hidden bg-[url("/images/Background.jpeg")] bg-no-repeat bg-cover'
       >
         <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10'>
           <div className='md:grid md:grid-cols-2 md:gap-20 lg:gap-35 items-center'>
             <div className='mb-12 lg:mb-0'>
               <div className='inline-flex items-center px-4 py-2 bg-black/5 backdrop-blur-sm rounded-full border border-white/15 mb-6'>
                 <span className='w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse'></span>
-                <span className='text-white text-lg font-large'>
-                  Hello! Sofía here.
-                </span>
+                <span className='text-white text-md'>Hello! Sofía here.</span>
               </div>
-              <h1 className='text-5xl md:text-6xl lg:text-7xl font-black text-white mb-10 leading-tight'>
+              <h1 className='text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-6 lg:mb-10 leading-tight'>
                 Software{' '}
                 <span className='block text-transparent animate-pulse bg-clip-text bg-gradient-to-r from-violet-200 to-pink-300 drop-shadow-[0_0_6px_rgba(236,72,153,0.6)]'>
                   developer
@@ -41,7 +39,7 @@ export const Home = () => {
                 technologies
               </p>
 
-              <div className='flex flex-col md:flex-row gap-4'>
+              <div className='px-6 py-4 lg:px-0 lg:py-0 flex flex-col md:flex-row gap-4'>
                 <button
                   className='group bg-gradient-to-r from-violet-300 to-pink-300 hover:to-pink-400 text-white sm:px-4 md:px-6 lg:px-8 py-4 rounded-2xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-xl hover:shadow-pink-950/20 hover:scale-105 hover:text-fuchsia-50 cursor-pointer'
                   onClick={() => scrollToSection('portfolio')}

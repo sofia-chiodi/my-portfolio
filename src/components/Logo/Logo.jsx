@@ -11,14 +11,14 @@ export const Logo = ({ isScrolled }) => {
     >
       <div className='relative'>
         <Sparkles
-          strokeWidth={2.1}
-          className={'w-8 h-8 transition-all duration-300'}
+          strokeWidth={2.3}
+          className={'w-5 h-5 md:w-6 md:h-6 transition-all duration-300'}
         />
       </div>
 
       <h1
         className={
-          'text-3xl font-medium bg-gradient-to-r from-violet-200 to-pink-300 bg-clip-text transition-all duration-300'
+          'text-lg md:text-xl lg:text-2xl font-medium bg-gradient-to-r from-violet-200 to-pink-300 bg-clip-text transition-all duration-300'
         }
       >
         Sofía Chiodi

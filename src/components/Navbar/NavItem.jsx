@@ -7,7 +7,7 @@ export const NavItem = ({
   return (
     <button
       onClick={() => scrollToSection(label.toLowerCase())}
-      className={`transition-all duration-150 cursor-pointer hover:scale-105 relative group text-xl font-medium ${
+      className={`transition-all duration-150 cursor-pointer hover:scale-105 relative group text-lg md:text-xl font-medium ${
         !isScrolled ? 'hover:text-white' : 'hover:text-pink-300'
       }`}
     >
