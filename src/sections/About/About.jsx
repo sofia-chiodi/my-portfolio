@@ -18,7 +18,7 @@ export const About = () => {
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-300 via-pink-300 to-pink-600 transform rotate-12 scale-150'></div>
         </div>
 
-        <div className='max-w-7xl mx-auto py-4 px-8 md:px-6 lg:px-10 relative z-10'>
+        <div className='max-w-7xl mx-auto px-6 lg:px-10 relative z-10'>
           <div className='text-center mb-16'>
             <div className='inline-flex px-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 text-4xl rounded-full font-bold shadow-xl shadow-pink-900/20'>
               <span className='animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-pink-300'>
@@ -37,16 +37,16 @@ export const About = () => {
           </div>
 
           {/* Description */}
-          <div className='max-w-5xl mx-auto mb-16'>
+          <div className='max-w-5xl mx-auto'>
             <div className='flex justify-center'>
               <div className='retro-window border-2 border-pink-300/60 shadow-xl shadow-pink-900/30'>
-                <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 text-md font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
+                <div className='window-header flex items-center justify-between px-4 py-2 bg-gradient-to-r from-pink-200 to-pink-200/60 font-press-start-2p-lg text-pink-400/70 border-b border-pink-300/60'>
                   <h3 className='font-bold'>about_me.exe</h3>
-                  <button className='text-pink-400/70 hover:scale-105 hover:text-violet-400/70 transition-colors'>
+                  <button className='text-pink-400/70 hover:scale-105 font-bold hover:text-violet-400/70 transition-colors'>
                     X
                   </button>
                 </div>
-                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-6 font-press-start-2p-sm gap-2'>
+                <div className='flex flex-col window-body bg-pink-50/80 text-violet-300 p-4 md:p-6 font-press-start-2p-sm gap-2'>
                   <p
                     className={`typewriter ${inView ? 'animate-typing-1' : ''}`}
                   >
