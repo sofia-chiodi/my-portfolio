@@ -64,7 +64,6 @@ export const Contact = () => {
       id='contact'
       className='min-h-screen py-32 relative overflow-hidden'
     >
-      {/* Background */}
       <div className='absolute top-0 w-96 h-96 bg-gradient-to-l from-pink-200 to-transparent rounded-full filter blur-xl opacity-60 -translate-y-48'></div>
       <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-pink-200 to-violet-200 rounded-full filter blur-xl opacity-60 translate-y-48'></div>
 
@@ -72,7 +71,7 @@ export const Contact = () => {
         <div className='text-center'>
           <SectionTitle>✨ Contact ✨</SectionTitle>
 
-          <h2 className='text-lg md:text-2xl lg:text-3xl font-bold text-violet-300 mb-16 leading-tight'>
+          <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-16 leading-tight'>
             Check out my{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-pink-300 to-violet-300'>
               social links{' '}
@@ -81,7 +80,6 @@ export const Contact = () => {
           </h2>
         </div>
 
-        {/* Social links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-8 md:mb-16'>
           {contactLinks.map((link, linkIndex) => {
             return (
@@ -112,8 +110,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      {/* Contact form */}
-      <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 grid grid-cols-2 gap-12'>
+      <div className='max-w-7xl mx-auto py-4 px-10 md:px-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-12'>
         <div className='bg-white rounded-3xl shadow-xl p-8 border border-gray-100'>
           <div className='mb-8'>
             <h3 className='text-2xl font-bold text-violet-300 mb-2'>

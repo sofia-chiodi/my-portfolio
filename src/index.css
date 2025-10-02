@@ -29,14 +29,25 @@ html {
 /* KEYFRAMES */
 
 /* Fade in */
-@keyframes fadeInDelay {
+@keyframes fadeInDelay-right {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDelay-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -106,20 +117,20 @@ html {
 /* ANIMATIONS */
 
 /* Fade in */
-.animate-fade-in-delay {
-  animation: fadeInDelay 0.5s ease-in-out forwards;
-}
-
 .animate-fade-in-delay-1 {
-  animation: fadeInDelay 1s ease-in-out forwards;
+  animation: fadeInDelay-right 1s ease-in-out forwards;
 }
 
 .animate-fade-in-delay-2 {
-  animation: fadeInDelay 2s ease-in-out forwards;
+  animation: fadeInDelay-left 2s ease-in-out forwards;
 }
 
 .animate-fade-in-delay-3 {
-  animation: fadeInDelay 3s ease-in-out forwards;
+  animation: fadeInDelay-right 3s ease-in-out forwards;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fadeInDelay-left 4s ease-in-out forwards;
 }
 
 .animate-fade-in-button {
