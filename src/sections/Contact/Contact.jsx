@@ -72,7 +72,7 @@ export const Contact = () => {
         <div className='text-center'>
           <SectionTitle>✨ Contact me ✨</SectionTitle>
 
-          <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-violet-300 mb-16 leading-tight'>
+          <h2 className='text-lg md:text-2xl lg:text-3xl font-bold text-violet-300 mb-16 leading-tight'>
             Check out my{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-pink-300 to-violet-300'>
               social links{' '}
@@ -82,7 +82,7 @@ export const Contact = () => {
         </div>
 
         {/* Social links */}
-        <div className='grid grid-cols-3 gap-10 mb-16'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-8 md:mb-16'>
           {contactLinks.map((link, linkIndex) => {
             return (
               <div
