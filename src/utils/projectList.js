@@ -51,6 +51,24 @@ const projectsList = [
     githubUrl: 'https://github.com/sofia-chiodi/quiz',
     demoUrl: '',
   },
+  {
+    id: 'project-4',
+    title: 'Holiday calendar',
+    description: 'National holiday calendar',
+    category: ['web'],
+    image: 'images/holiday-calendar.png',
+    stack: [
+      'JavaScript',
+      'React',
+      'TypeScript',
+      'TanStack Query',
+      'Tailwind CSS',
+      'Git',
+      'Vite',
+    ],
+    githubUrl: 'https://github.com/sofia-chiodi/holiday-calendar',
+    demoUrl: '',
+  },
 ]
 
 export default projectsList
