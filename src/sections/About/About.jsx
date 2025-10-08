@@ -1,9 +1,34 @@
+import { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import { Card } from '@/components/Card/Card'
 import skillsList from '../../utils/skillsList'
 import { SectionTitle } from '@/components/SectionTitle/SectionTitle'
 import { FaArrowDown } from 'react-icons/fa'
 
 export const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  })
+
+  const [visibleMessage, setVisibleMessage] = useState(0)
+  const [showSkills, setShowSkills] = useState(false)
+
+  useEffect(() => {
+    if (inView) {
+      const animationIntervals = [
+        setTimeout(() => setVisibleMessage(1), 200),
+        setTimeout(() => setVisibleMessage(2), 1200),
+        setTimeout(() => setVisibleMessage(3), 2200),
+        setTimeout(() => setVisibleMessage(4), 3200),
+        setTimeout(() => setVisibleMessage(5), 4200),
+      ]
+      return () => {
+        animationIntervals.forEach((interval) => clearTimeout(interval))
+      }
+    }
+  }, [inView])
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId)
     if (section) {
@@ -11,9 +36,17 @@ export const About = () => {
     }
   }
 
+  const handleShowSkills = () => {
+    setShowSkills(true)
+    const skillSection = document.getElementById('skills')
+    if (skillSection) {
+      skillSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section id='about'>
-      <div className='min-h-screen py-32 relative overflow-hidden'>
+    <section id='about' ref={ref}>
+      <div className='min-h-screen py-32 relative'>
         <div className='absolute inset-0 opacity-30'>
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-fuchsia-700 via-pink-400/80 to-violet-300 transform scale-150'></div>
         </div>
@@ -22,8 +55,14 @@ export const About = () => {
           <div className='text-center'>
             <SectionTitle>✨ About me ✨</SectionTitle>
 
-            <div className='max-w-3xl mx-auto mb-16 space-y-6'>
-              <div className='flex justify-start pr-12 animate-fade-in-delay-1'>
+            <div className='max-w-3xl mx-auto mb-16 space-y-6 relative'>
+              <div
+                className={`flex justify-start pr-12 transition-all duration-700 ${
+                  visibleMessage >= 1
+                    ? 'animate-fade-in-delay-left opacity-100'
+                    : 'opacity-0 translate-y-5'
+                }`}
+              >
                 <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-violet-300/20 backdrop-blur-md shadow-md text-left'>
                   <p className='text-white text-lg md:text-xl leading-relaxed'>
                     I'm a{' '}
@@ -38,7 +77,13 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className='flex justify-end pl-12 animate-fade-in-delay-2'>
+              <div
+                className={`flex justify-end pl-12 transition-all duration-700 ${
+                  visibleMessage >= 2
+                    ? 'animate-fade-in-delay-right opacity-100'
+                    : 'opacity-0 translate-y-5'
+                }`}
+              >
                 <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-pink-300/30 backdrop-blur-md shadow-md text-left'>
                   <p className='text-white text-lg md:text-xl leading-relaxed'>
                     I love creating{' '}
@@ -53,7 +98,13 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className='flex justify-start pr-12 animate-fade-in-delay-3'>
+              <div
+                className={`flex justify-start pr-12 transition-all duration-700 ${
+                  visibleMessage >= 3
+                    ? 'animate-fade-in-delay-left opacity-100'
+                    : 'opacity-0 translate-y-5'
+                }`}
+              >
                 <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-violet-300/20 backdrop-blur-md shadow-md text-left'>
                   <p className='text-white text-lg md:text-xl leading-relaxed'>
                     This{' '}
@@ -64,15 +115,21 @@ export const About = () => {
                     <span className='font-semibold text-pink-300/70'>
                       projects
                     </span>{' '}
-                    I’ve worked on
+                    I've worked on
                   </p>
                 </div>
               </div>
 
-              <div className='flex justify-end pl-12 animate-fade-in-delay-4'>
+              <div
+                className={`flex justify-end pl-12 transition-all duration-700 ${
+                  visibleMessage >= 4
+                    ? 'animate-fade-in-delay-right opacity-100'
+                    : 'opacity-0 translate-y-5'
+                }`}
+              >
                 <div className='max-w-xs md:max-w-md p-4 rounded-2xl bg-pink-300/30 backdrop-blur-md shadow-md text-left'>
                   <p className='text-white text-lg md:text-xl leading-relaxed'>
-                    Check out below my most used{' '}
+                    Check out below my frequently used{' '}
                     <span className='font-semibold bg-gradient-to-r from-pink-300 to-violet-300 bg-clip-text text-transparent'>
                       tech stacks!
                     </span>{' '}
@@ -80,26 +137,51 @@ export const About = () => {
                 </div>
               </div>
 
-              <button
-                className='right-6 z-50 bg-gradient-to-r from-violet-300 to-pink-300 
-                      rounded-full p-2 hover:scale-110 transition-all duration-300 text-white/80 
-                      border border-white/80 shadow-lg'
-              >
-                <FaArrowDown
-                  size={20}
-                  className='animate-button-bounce-y hover:scale-110 transition-all duration-200'
-                />
-              </button>
+              <div className='flex justify-center mt-10'>
+                <button
+                  onClick={handleShowSkills}
+                  className={`bg-gradient-to-r from-violet-300 to-pink-300 
+                    rounded-full p-3 hover:scale-110 transition-all duration-300 text-white/80 
+                    border border-white/80 shadow-lg ${
+                      visibleMessage >= 5
+                        ? 'opacity-100'
+                        : 'opacity-0 pointer-events-none'
+                    }`}
+                >
+                  <FaArrowDown
+                    size={24}
+                    className='animate-bounce hover:scale-110 transition-all duration-200'
+                  />
+                </button>
+              </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
-              {skillsList.map((skill) => (
-                <Card
+            <div
+              id='skills'
+              className={`mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 transition-all duration-700 ${
+                showSkills
+                  ? 'opacity-100 translate-y-0 h-auto'
+                  : 'opacity-0 h-0 overflow-hidden pointer-events-none'
+              }`}
+              style={{
+                transition:
+                  'opacity 0.7s ease, transform 0.7s ease, height 0.5s ease',
+                transform: showSkills ? 'translateY(0)' : 'translateY(20px)',
+              }}
+            >
+              {skillsList.map((skill, index) => (
+                <div
                   key={skill.id}
-                  title={skill.title}
-                  description={skill.description}
-                  icon={skill.icon}
-                />
+                  className={`transition-all duration-700 ease-out delay-[${
+                    index * 100
+                  }ms] ${
+                    showSkills
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-6'
+                  }`}
+                >
+                  <Card title={skill.title} icon={skill.icon} />
+                </div>
               ))}
             </div>
 
