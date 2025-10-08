@@ -6,7 +6,6 @@ export const ResponsiveNavbar = ({
   scrollToSection,
   isScrolled,
 }) => {
-  console.log('responsive', isResponsiveMenuOpen)
   return (
     <div
       className={`animate-fade-in-delay md:hidden w-full ${
