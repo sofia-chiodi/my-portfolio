@@ -1,5 +1,4 @@
 import { FaCode, FaArrowRight } from 'react-icons/fa6'
-import { IoIosPhonePortrait } from 'react-icons/io'
 import { IoBrowsersOutline } from 'react-icons/io5'
 import { HomeButton } from '@/components/HomeButton/HomeButton.jsx'
 import { TextContainer } from '../../components/TextContainer/TextContainer'
@@ -69,7 +68,7 @@ export const Home = () => {
             </div>
 
             <div className='relative'>
-              <TextContainer className='mt-12'>
+              <TextContainer className='lg:mt-35'>
                 <h3 className='text-white text-center justify-center font-bold text-xl mb-6'>
                   Let's work together!
                 </h3>
@@ -92,25 +91,6 @@ export const Home = () => {
 
               <TextContainer className='p-6'>
                 <div className='space-y-full max-w-3xl'>
-                  <div className='flex items-center space-x-4 p-4 bg-white/20 backdrop:blur-md rounded-2xl mb-4'>
-                    <div className='w-10 h-10 bg-gradient-to-r from-orange-200 via-violet-200/70 to-violet-300/70 rounded-2xl flex items-center justify-center backdrop:blur-sm'>
-                      <span className='text-white font-semibold'>
-                        <IoIosPhonePortrait size={28} className='font-bold' />
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className='text-violet-300/80 font-bold'>
-                        Mobile Development
-                        <p className='text-white text-sm'>
-                          Modern applications
-                        </p>
-                      </h4>
-                    </div>
-                    <div className='ml-auto'>
-                      <div className='w-3 h-3 bg-green-400 rounded-full animate-pulse'></div>
-                    </div>
-                  </div>
-
                   <div className='flex items-center space-x-4 p-4 bg-white/20 backdrop:blur-md rounded-2xl'>
                     <div className='w-10 h-10 bg-gradient-to-r from-blue-200/70 via-pink-200/70 to-pink-300/70 rounded-2xl flex items-center justify-center'>
                       <span className='text-white font-semibold'>
