@@ -117,20 +117,32 @@ html {
 /* ANIMATIONS */
 
 /* Fade in */
+.animate-fade-in-delay-right {
+  animation: fadeInDelay-right;
+}
+
+.animate-fade-in-delay-left {
+  animation: fadeInDelay-left;
+}
+
 .animate-fade-in-delay-1 {
-  animation: fadeInDelay-right 1s ease-in-out forwards;
+  animation: fadeInDelay-right 1s;
 }
 
 .animate-fade-in-delay-2 {
-  animation: fadeInDelay-left 2s ease-in-out forwards;
+  animation: fadeInDelay-left 2s;
 }
 
 .animate-fade-in-delay-3 {
-  animation: fadeInDelay-right 3s ease-in-out forwards;
+  animation: fadeInDelay-right 2s;
 }
 
 .animate-fade-in-delay-4 {
   animation: fadeInDelay-left 4s ease-in-out forwards;
+}
+
+.animate-fade-in-delay-5 {
+  animation: fadeInDelay-top 5s ease-in-out forwards;
 }
 
 .animate-fade-in-button {
