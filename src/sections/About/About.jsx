@@ -40,7 +40,13 @@ export const About = () => {
     setShowSkills(true)
     const skillSection = document.getElementById('skills')
     if (skillSection) {
-      skillSection.scrollIntoView({ behavior: 'smooth' })
+      const offset = 80
+      const sectionTop =
+        skillSection.getBoundingClientRect().top + window.pageYOffset
+      window.scrollTo({
+        top: sectionTop - offset,
+        behavior: 'smooth',
+      })
     }
   }
 
@@ -55,6 +61,7 @@ export const About = () => {
           <div className='text-center'>
             <SectionTitle>✨ About me ✨</SectionTitle>
 
+            {/* Abuout me */}
             <div className='max-w-3xl mx-auto mb-16 space-y-6 relative'>
               <div
                 className={`flex justify-start pr-12 transition-all duration-700 ${
@@ -156,6 +163,7 @@ export const About = () => {
               </div>
             </div>
 
+            {/* Skills */}
             <div
               id='skills'
               className={`mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 transition-all duration-700 ${
@@ -190,13 +198,13 @@ export const About = () => {
                 <div className='absolute inset-0 bg-black/10'></div>
                 <div className='relative z-10'>
                   <h3 className='text-2xl md:text-3xl font-bold mb-4 text-white'>
-                    Check out my projects!
+                    Get in touch with me!
                   </h3>
                   <button
                     className='bg-gradient-to-r from-pink-300 to-violet-300 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-xl'
-                    onClick={() => scrollToSection('portfolio')}
+                    onClick={() => scrollToSection('contact')}
                   >
-                    Portfolio
+                    Contact
                   </button>
                 </div>
               </div>
