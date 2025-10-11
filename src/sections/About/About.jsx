@@ -144,16 +144,21 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className='flex justify-center mt-10'>
+              <div
+                className={`flex flex-col items-center gap-3 mt-10 transition-all duration-700 ${
+                  visibleMessage >= 5
+                    ? 'opacity-100'
+                    : 'opacity-0 pointer-events-none'
+                }`}
+              >
+                <p className='text-white/80 text-lg md:text-xl font-medium animate-pulse tracking-wide'>
+                  Press to show skills
+                </p>
                 <button
                   onClick={handleShowSkills}
-                  className={`bg-gradient-to-r from-violet-300 to-pink-300 
-                    rounded-full p-3 hover:scale-110 transition-all duration-300 text-white/80 
-                    border border-white/80 shadow-lg ${
-                      visibleMessage >= 5
-                        ? 'opacity-100'
-                        : 'opacity-0 pointer-events-none'
-                    }`}
+                  className='bg-gradient-to-r from-violet-300 to-pink-300 
+      rounded-full p-3 hover:scale-110 transition-all duration-300 text-white 
+      border border-white/80 shadow-lg'
                 >
                   <FaArrowDown
                     size={24}
