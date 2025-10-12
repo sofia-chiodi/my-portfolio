@@ -1,6 +1,6 @@
 const projectFilters = [
   { id: 'all', label: 'All' },
-  { id: 'web', label: 'Web' },
+  { id: 'e-commerce', label: 'E-commerce' },
   { id: 'game', label: 'Games' },
 ]
 
