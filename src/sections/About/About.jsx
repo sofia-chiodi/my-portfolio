@@ -53,8 +53,8 @@ export const About = () => {
   return (
     <section id='about' ref={ref} className='relative overflow-hidden'>
       <div className='min-h-screen py-32 relative'>
-        <div className='fixed inset-0 opacity-30 z-0'>
-          <div className='absolute bg-gradient-to-r from-fuchsia-700 via-pink-400/80 to-violet-300'></div>
+        <div className='absolute inset-0 opacity-40 z-0'>
+          <div className='w-full h-full bg-gradient-to-r from-fuchsia-700/80 via-pink-400/80 to-violet-300'></div>
         </div>
 
         <div className='max-w-7xl mx-auto py-4 px-6 md:px-12 lg:px-10 relative z-10'>
